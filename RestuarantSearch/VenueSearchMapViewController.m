@@ -9,7 +9,6 @@
 #import "VenueSearchMapViewController.h"
 #import "VenueResult.h"
 
-
 @interface VenueSearchMapViewController ()
 
 @property (nonatomic, strong) CLLocationManager *locationManager;
@@ -40,8 +39,10 @@
     
     _searchResults = [venueResultsMutable copy];
     
-//    [self.mapView removeAnnotations:self.mapView.annotations];
-//    [self.mapView addAnnotations:_searchResults];
+
+    
+    [self.mapView removeAnnotations:self.mapView.annotations];
+    [self.mapView addAnnotations:_searchResults];
 }
 
 - (BOOL)isLocationServicesAllowed
@@ -107,6 +108,7 @@
     }
     
     [self.mapView setDelegate:self];
+
 }
 
 - (void)didReceiveMemoryWarning
