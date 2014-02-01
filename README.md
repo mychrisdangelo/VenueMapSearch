@@ -41,4 +41,3 @@ To Do
 1.  Keyword search is not robust but allows for multiword keyword search.
 2.  Currently redrawing map in order to refresh annotations.
 3.  Use FontAwesome for star rating.
-4.  Alertview blocks in the searchbar
