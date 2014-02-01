@@ -25,6 +25,7 @@
 		403DC735189A16160023C197 /* COMSMapManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 403DC734189A16160023C197 /* COMSMapManager.framework */; };
 		403DC739189A19ED0023C197 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 403DC738189A19ED0023C197 /* CoreLocation.framework */; };
 		403DC73B189A1AE20023C197 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 403DC73A189A1AE20023C197 /* MapKit.framework */; };
+		4079ECC9189D778E0010B85D /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4079ECC8189D778E0010B85D /* FontAwesome.otf */; };
 		407D4BF8189CAE6D0013BDF4 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 407D4BF7189CAE6D0013BDF4 /* README.md */; };
 		407D4BFB189CBD7F0013BDF4 /* VenueListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 407D4BFA189CBD7F0013BDF4 /* VenueListTableViewController.m */; };
 		407D4BFE189CC52E0013BDF4 /* VenueDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 407D4BFD189CC52E0013BDF4 /* VenueDetailTableViewController.m */; };
@@ -67,6 +68,7 @@
 		403DC734189A16160023C197 /* COMSMapManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = COMSMapManager.framework; sourceTree = "<group>"; };
 		403DC738189A19ED0023C197 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		403DC73A189A1AE20023C197 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		4079ECC8189D778E0010B85D /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.otf; path = ../FontAwesome.otf; sourceTree = "<group>"; };
 		407D4BF7189CAE6D0013BDF4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = RestuarantSearch/README.md; sourceTree = "<group>"; };
 		407D4BF9189CBD7F0013BDF4 /* VenueListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VenueListTableViewController.h; path = ../VenueListTableViewController.h; sourceTree = "<group>"; };
 		407D4BFA189CBD7F0013BDF4 /* VenueListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VenueListTableViewController.m; path = ../VenueListTableViewController.m; sourceTree = "<group>"; };
@@ -148,7 +150,6 @@
 				407D4BFD189CC52E0013BDF4 /* VenueDetailTableViewController.m */,
 				40161959189C84F10089C1B9 /* VenueResult.h */,
 				4016195A189C84F10089C1B9 /* VenueResult.m */,
-				403DC717189A158F0023C197 /* Images.xcassets */,
 				4079ECC7189D72570010B85D /* Shared */,
 				4079ECC6189D721B0010B85D /* Unused */,
 				403DC703189A158F0023C197 /* Supporting Files */,
@@ -203,8 +204,18 @@
 				40161953189C543C0089C1B9 /* Constants.h */,
 				403DC70B189A158F0023C197 /* VenueMapSearchAppDelegate.h */,
 				403DC70C189A158F0023C197 /* VenueMapSearchAppDelegate.m */,
+				403DC717189A158F0023C197 /* Images.xcassets */,
+				4079ECCA189D78E20010B85D /* Fonts */,
 			);
 			name = Shared;
+			sourceTree = "<group>";
+		};
+		4079ECCA189D78E20010B85D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4079ECC8189D778E0010B85D /* FontAwesome.otf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,6 +295,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4079ECC9189D778E0010B85D /* FontAwesome.otf in Resources */,
 				403DC718189A158F0023C197 /* Images.xcassets in Resources */,
 				403DC707189A158F0023C197 /* InfoPlist.strings in Resources */,
 				407D4BF8189CAE6D0013BDF4 /* README.md in Resources */,

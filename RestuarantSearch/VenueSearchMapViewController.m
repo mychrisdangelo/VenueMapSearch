@@ -159,6 +159,22 @@
     [self.mapView setDelegate:self];
     
     self.searchCategory = kSearchQueryTypeDefault;
+    
+    // [self checkFonts];
+    
+}
+
+- (void)checkFonts
+{
+    for (NSString* family in [UIFont familyNames])
+    {
+        NSLog(@"%@", family);
+        
+        for (NSString* name in [UIFont fontNamesForFamilyName: family])
+        {
+            NSLog(@"  %@", name);
+        }
+    }
 }
 
 - (void)setupSearchBar
@@ -185,10 +201,13 @@
 
 - (void)startSearch:(NSString *)searchString
 {
+    // not very robus
+    NSString* urlFriendlyString = [searchString stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+    
     // search 1 km
     [GoogleMapManager nearestVenuesForLatLong:self.userLocation
                                  withinRadius:kSearchRadiusMeters
-                                     forQuery:searchString
+                                     forQuery:urlFriendlyString
                                     queryType:self.searchCategory
                              googleMapsAPIKey:kGoogleApiPlacesKey
                              searchCompletion:^(NSMutableArray *results) {

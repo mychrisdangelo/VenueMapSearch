@@ -46,18 +46,18 @@
             <objects>
                 <viewController id="MYQ-k3-Yrm" customClass="VenueSearchMapViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="knf-m2-sA0"/>
-                        <viewControllerLayoutGuide type="bottom" id="0Sf-G4-bdO"/>
+                        <viewControllerLayoutGuide type="top" id="QRw-bn-5Bu"/>
+                        <viewControllerLayoutGuide type="bottom" id="LAG-lw-hhP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="anZ-HT-cAx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gWa-qS-Fex">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gWa-qS-Fex">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5is-qk-mZg">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5is-qk-mZg">
                                 <rect key="frame" x="255" y="505" width="45" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="ShowList">
@@ -69,6 +69,14 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="gWa-qS-Fex" secondAttribute="trailing" id="9er-Z2-phB"/>
+                            <constraint firstItem="gWa-qS-Fex" firstAttribute="leading" secondItem="anZ-HT-cAx" secondAttribute="leading" id="C7S-KD-7ca"/>
+                            <constraint firstItem="LAG-lw-hhP" firstAttribute="top" secondItem="5is-qk-mZg" secondAttribute="bottom" constant="18" id="Lhf-hm-e8e"/>
+                            <constraint firstAttribute="trailing" secondItem="5is-qk-mZg" secondAttribute="trailing" constant="20" id="ZBC-30-uyz"/>
+                            <constraint firstItem="gWa-qS-Fex" firstAttribute="top" secondItem="anZ-HT-cAx" secondAttribute="top" id="b6z-3G-Hmf"/>
+                            <constraint firstItem="LAG-lw-hhP" firstAttribute="top" secondItem="gWa-qS-Fex" secondAttribute="bottom" id="mUa-xh-73s"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="0mw-nK-XMa"/>
