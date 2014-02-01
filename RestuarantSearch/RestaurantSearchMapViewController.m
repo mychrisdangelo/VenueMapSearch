@@ -7,6 +7,7 @@
 //
 
 #import "RestaurantSearchMapViewController.h"
+#import "VenueResult.h"
 
 
 @interface RestaurantSearchMapViewController ()
@@ -15,10 +16,68 @@
 @property (nonatomic) CLLocationCoordinate2D userLocation;
 @property (nonatomic, strong) NSArray *searchResults;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (nonatomic) BOOL isLocationServicesAllowed;
 
 @end
 
 @implementation RestaurantSearchMapViewController 
+
+- (void)setUserLocation:(CLLocationCoordinate2D)userLocation
+{
+    _userLocation = userLocation;
+    [self updateMapViewBounds];
+}
+
+- (void)setSearchResults:(NSArray *)searchResults
+{
+    // change searchResults from NSDictionary objecdts to VenueResult objects conforming to Annotations
+    NSMutableArray *venueResultsMutable = [[NSMutableArray alloc] init];
+    for (NSDictionary *each in searchResults) {
+        VenueResult *vr = [[VenueResult alloc] initWithMapManagerDictionary:each];
+        [venueResultsMutable addObject:vr];
+    }
+    
+    _searchResults = [venueResultsMutable copy];
+    
+    [self.mapView removeAnnotations:self.mapView.annotations];
+    [self.mapView addAnnotations:_searchResults];
+}
+
+- (BOOL)isLocationServicesAllowed
+{
+    BOOL isAllowed = YES;
+    // check to see if Location Services is enabled, there are two state possibilities:
+    // 1) disabled for entire device, 2) disabled just for this app
+    //
+    NSString *causeStr = nil;
+    
+    // check whether location services are enabled on the device
+    if ([CLLocationManager locationServicesEnabled] == NO)
+    {
+        causeStr = @"device";
+        isAllowed = NO;
+    }
+    // check the application’s explicit authorization status:
+    else if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusDenied)
+    {
+        causeStr = @"app";
+        isAllowed = NO;
+    }
+    
+    if (causeStr != nil)
+    {
+        NSString *alertMessage = [NSString stringWithFormat:@"You currently have location services disabled for this %@. Please refer to \"Settings\" app to turn on Location Services.", causeStr];
+        
+        UIAlertView *servicesDisabledAlert = [[UIAlertView alloc] initWithTitle:@"Location Services Disabled"
+                                                                        message:alertMessage
+                                                                       delegate:nil
+                                                              cancelButtonTitle:@"OK"
+                                                              otherButtonTitles:nil];
+        [servicesDisabledAlert show];
+    }
+    
+    return isAllowed;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -40,10 +99,11 @@
     [self.searchDisplayController setSearchResultsDelegate:nil];
     
     // start by locating user's current position
-	self.locationManager = [[CLLocationManager alloc] init];
-	self.locationManager.delegate = self;
-	[self.locationManager startUpdatingLocation];
-
+    if (self.isLocationServicesAllowed) {
+        self.locationManager = [[CLLocationManager alloc] init];
+        self.locationManager.delegate = self;
+        [self.locationManager startUpdatingLocation];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -56,12 +116,14 @@
 {
     // search 1 km
     [GoogleMapManager nearestVenuesForLatLong:self.userLocation
-                                 withinRadius:1000
+                                 withinRadius:kSearchRadiusMeters
                                      forQuery:searchString
-                                    queryType:@"restaurant"
+                                    queryType:kSearchQueryType
                              googleMapsAPIKey:kGoogleApiPlacesKey
                              searchCompletion:^(NSMutableArray *results) {
                                  NSLog(@"%@", results);
+                                 
+                                 [self setSearchResults:results];
 
                                 [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
                                  if (![results count]) {
@@ -74,6 +136,13 @@
                                  }
                              }];
 
+
+    
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+}
+
+- (void) updateMapViewBounds
+{
     // confine the map search area to the user's current location
     MKCoordinateRegion boundingRegion;
     boundingRegion.center.latitude = self.userLocation.latitude;
@@ -87,10 +156,7 @@
     boundingRegion.span.longitudeDelta = 0.109863;
     
     [self.mapView setRegion:boundingRegion];
-    
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
 }
-
 
 //
 //MKLocalSearchRequest *request = [[MKLocalSearchRequest alloc] init];
@@ -140,38 +206,19 @@
 {
     [searchBar resignFirstResponder];
     
-    // check to see if Location Services is enabled, there are two state possibilities:
-    // 1) disabled for entire device, 2) disabled just for this app
-    //
-    NSString *causeStr = nil;
-    
-    // check whether location services are enabled on the device
-    if ([CLLocationManager locationServicesEnabled] == NO)
-    {
-        causeStr = @"device";
-    }
-    // check the application’s explicit authorization status:
-    else if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusDenied)
-    {
-        causeStr = @"app";
-    }
-    else
-    {
-        // we are good to go, start the search
+    if (self.isLocationServicesAllowed) {
         [self startSearch:searchBar.text];
     }
-    
-    if (causeStr != nil)
-    {
-        NSString *alertMessage = [NSString stringWithFormat:@"You currently have location services disabled for this %@. Please refer to \"Settings\" app to turn on Location Services.", causeStr];
-        
-        UIAlertView *servicesDisabledAlert = [[UIAlertView alloc] initWithTitle:@"Location Services Disabled"
-                                                                        message:alertMessage
-                                                                       delegate:nil
-                                                              cancelButtonTitle:@"OK"
-                                                              otherButtonTitles:nil];
-        [servicesDisabledAlert show];
-    }
+}
+
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
+{
+    [searchBar setShowsCancelButton:YES animated:YES];
+}
+
+- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar
+{
+    [searchBar setShowsCancelButton:NO animated:YES];
 }
 
 #pragma mark - UISearchDisplayControllerDelegate

@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "403DC6F8189A158F0023C197"
                BuildableName = "RestuarantSearch.app"
-               BlueprintName = "RestuarantSearch"
-               ReferencedContainer = "container:RestuarantSearch.xcodeproj">
+               BlueprintName = "RestaurantSearch"
+               ReferencedContainer = "container:RestaurantSearch.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "403DC71C189A158F0023C197"
                BuildableName = "RestuarantSearchTests.xctest"
-               BlueprintName = "RestuarantSearchTests"
-               ReferencedContainer = "container:RestuarantSearch.xcodeproj">
+               BlueprintName = "RestaurantSearchTests"
+               ReferencedContainer = "container:RestaurantSearch.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,8 +44,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "403DC6F8189A158F0023C197"
             BuildableName = "RestuarantSearch.app"
-            BlueprintName = "RestuarantSearch"
-            ReferencedContainer = "container:RestuarantSearch.xcodeproj">
+            BlueprintName = "RestaurantSearch"
+            ReferencedContainer = "container:RestaurantSearch.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -63,8 +63,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "403DC6F8189A158F0023C197"
             BuildableName = "RestuarantSearch.app"
-            BlueprintName = "RestuarantSearch"
-            ReferencedContainer = "container:RestuarantSearch.xcodeproj">
+            BlueprintName = "RestaurantSearch"
+            ReferencedContainer = "container:RestaurantSearch.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -81,8 +81,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "403DC6F8189A158F0023C197"
             BuildableName = "RestuarantSearch.app"
-            BlueprintName = "RestuarantSearch"
-            ReferencedContainer = "container:RestuarantSearch.xcodeproj">
+            BlueprintName = "RestaurantSearch"
+            ReferencedContainer = "container:RestaurantSearch.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -10,5 +10,7 @@
 #define RestuarantSearch_Constants_h
 
 #define kGoogleApiPlacesKey @"AIzaSyDVGFSM_b2vPpZUSJsK0TNFG3cYBkZwVAY"
+#define kSearchRadiusMeters 1000
+#define kSearchQueryType @"restaurant"
 
 #endif

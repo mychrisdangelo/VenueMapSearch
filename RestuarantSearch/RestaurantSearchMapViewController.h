@@ -12,6 +12,6 @@
 #import <MapKit/MapKit.h>
 #import "Constants.h"
 
-@interface RestaurantSearchMapViewController : UIViewController <UISearchDisplayDelegate, UISearchBarDelegate, CLLocationManagerDelegate>
+@interface RestaurantSearchMapViewController : UIViewController <UISearchDisplayDelegate, UISearchBarDelegate, CLLocationManagerDelegate, MKMapViewDelegate>
 
 @end
