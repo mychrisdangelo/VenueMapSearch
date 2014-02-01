@@ -25,6 +25,8 @@
         
         self.vicinity = MapManagerDictionary[kVenueResultVicinity];
         
+        self.rating = [MapManagerDictionary[kVenueResultRating] floatValue];
+        
         // TODO other attributes
 		
 	}

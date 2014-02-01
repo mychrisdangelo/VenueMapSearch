@@ -8,6 +8,8 @@
 
 #import "VenueSearchMapViewController.h"
 #import "VenueResult.h"
+#import "VenueListTableViewController.h"
+#import "VenueDetailTableViewController.h"
 
 @interface VenueSearchMapViewController ()
 
@@ -70,6 +72,28 @@
             region.span.latitudeDelta = boundingRect.size.width;
             region.span.longitudeDelta = boundingRect.size.height;
             [self.mapView setRegion:region animated:YES];
+        }
+    }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"ShowListSegue"]) {
+        if ([segue.destinationViewController isKindOfClass:[VenueListTableViewController class]]) {
+            VenueListTableViewController *vltvc = (VenueListTableViewController *)segue.destinationViewController;
+            vltvc.searchResults = self.searchResults;
+            
+        }
+    }
+    
+    if ([segue.identifier isEqualToString:@"ShowVenueDetail"]) {
+        if ([segue.destinationViewController isKindOfClass:[VenueDetailTableViewController class]]) {
+            VenueDetailTableViewController *vdtvc = (VenueDetailTableViewController *)segue.destinationViewController;
+            MKAnnotationView *av = sender;
+            if ([av.annotation isKindOfClass:[VenueResult class]]) {
+                VenueResult *vr = av.annotation;
+                vdtvc.venue = vr;
+            }
         }
     }
 }
@@ -163,7 +187,7 @@
     // search 1 km
     [GoogleMapManager nearestVenuesForLatLong:self.userLocation
                                  withinRadius:kSearchRadiusMeters
-                                     forQuery:searchString
+                                     forQuery:self.searchCategory
                                     queryType:kSearchQueryType
                              googleMapsAPIKey:kGoogleApiPlacesKey
                              searchCompletion:^(NSMutableArray *results) {
@@ -179,7 +203,10 @@
                                                                           otherButtonTitles:nil];
                                     [alert show];
 #warning TODO this alert is blocking the main thread!
+
                                  }
+                                
+
                              }];
 
 
@@ -270,9 +297,26 @@
 			annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"Pin"];
 			annotationView.canShowCallout = YES;
 			annotationView.animatesDrop = YES;
+            
+            // add a detail disclosure button to the callout which will open a new view controller page
+            //
+            // note: when the detail disclosure button is tapped, we respond to it via:
+            //       calloutAccessoryControlTapped delegate method
+            //
+            // by using "calloutAccessoryControlTapped", it's a convenient way to find out which annotation was tapped
+            //
+            UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+            [rightButton addTarget:nil action:nil forControlEvents:UIControlEventTouchUpInside];
+            annotationView.rightCalloutAccessoryView = rightButton;
 		}
 	}
-	return annotationView;
+	
+    return annotationView;
+}
+
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
+{
+    [self performSegueWithIdentifier:@"ShowVenueDetail" sender:view];
 }
 
 @end

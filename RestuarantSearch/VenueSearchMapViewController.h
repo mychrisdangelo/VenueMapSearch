@@ -14,4 +14,6 @@
 
 @interface VenueSearchMapViewController : UIViewController <UISearchDisplayDelegate, UISearchBarDelegate, CLLocationManagerDelegate, MKMapViewDelegate>
 
+@property (nonatomic, strong) NSString *searchCategory;
+
 @end

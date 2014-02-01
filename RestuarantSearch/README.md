@@ -27,3 +27,4 @@ Todo:
 
 1. Alertview blocks in the searchbar
 2. Currently redrawing map in order to refresh annotations. lame.
+3. Multi word searches
