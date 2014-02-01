@@ -41,10 +41,10 @@
             </objects>
             <point key="canvasLocation" x="-1" y="64"/>
         </scene>
-        <!--Restaurant Search Map View Controller-->
+        <!--Venue Search Map View Controller-->
         <scene sceneID="Bj9-9y-YyC">
             <objects>
-                <viewController id="MYQ-k3-Yrm" customClass="RestaurantSearchMapViewController" sceneMemberID="viewController">
+                <viewController id="MYQ-k3-Yrm" customClass="VenueSearchMapViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="knf-m2-sA0"/>
                         <viewControllerLayoutGuide type="bottom" id="0Sf-G4-bdO"/>

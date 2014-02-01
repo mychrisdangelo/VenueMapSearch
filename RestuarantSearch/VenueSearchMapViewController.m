@@ -6,11 +6,11 @@
 //  Copyright (c) 2014 Chris D'Angelo. All rights reserved.
 //
 
-#import "RestaurantSearchMapViewController.h"
+#import "VenueSearchMapViewController.h"
 #import "VenueResult.h"
 
 
-@interface RestaurantSearchMapViewController ()
+@interface VenueSearchMapViewController ()
 
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic) CLLocationCoordinate2D userLocation;
@@ -20,7 +20,7 @@
 
 @end
 
-@implementation RestaurantSearchMapViewController 
+@implementation VenueSearchMapViewController 
 
 - (void)setUserLocation:(CLLocationCoordinate2D)userLocation
 {

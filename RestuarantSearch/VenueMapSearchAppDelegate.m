@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Chris D'Angelo. All rights reserved.
 //
 
-#import "RestuarantSearchAppDelegate.h"
+#import "VenueMapSearchAppDelegate.h"
 
-@implementation RestuarantSearchAppDelegate
+@implementation VenueMapSearchAppDelegate
 
 @end

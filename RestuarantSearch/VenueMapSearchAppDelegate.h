@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RestuarantSearchAppDelegate : UIResponder <UIApplicationDelegate>
+@interface VenueMapSearchAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

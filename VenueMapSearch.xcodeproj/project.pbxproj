@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		40161956189C54770089C1B9 /* RestaurantSearchMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40161955189C54770089C1B9 /* RestaurantSearchMapViewController.m */; };
+		40161956189C54770089C1B9 /* VenueSearchMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40161955189C54770089C1B9 /* VenueSearchMapViewController.m */; };
 		4016195B189C84F10089C1B9 /* VenueResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 4016195A189C84F10089C1B9 /* VenueResult.m */; };
 		403DC6FD189A158F0023C197 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 403DC6FC189A158F0023C197 /* Foundation.framework */; };
 		403DC6FF189A158F0023C197 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 403DC6FE189A158F0023C197 /* CoreGraphics.framework */; };
 		403DC701189A158F0023C197 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 403DC700189A158F0023C197 /* UIKit.framework */; };
 		403DC707189A158F0023C197 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 403DC705189A158F0023C197 /* InfoPlist.strings */; };
 		403DC709189A158F0023C197 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 403DC708189A158F0023C197 /* main.m */; };
-		403DC70D189A158F0023C197 /* RestuarantSearchAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 403DC70C189A158F0023C197 /* RestuarantSearchAppDelegate.m */; };
+		403DC70D189A158F0023C197 /* VenueMapSearchAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 403DC70C189A158F0023C197 /* VenueMapSearchAppDelegate.m */; };
 		403DC710189A158F0023C197 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 403DC70E189A158F0023C197 /* Main.storyboard */; };
 		403DC718189A158F0023C197 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 403DC717189A158F0023C197 /* Images.xcassets */; };
 		403DC71F189A158F0023C197 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 403DC71E189A158F0023C197 /* XCTest.framework */; };
@@ -39,8 +39,8 @@
 
 /* Begin PBXFileReference section */
 		40161953189C543C0089C1B9 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
-		40161954189C54770089C1B9 /* RestaurantSearchMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantSearchMapViewController.h; sourceTree = "<group>"; };
-		40161955189C54770089C1B9 /* RestaurantSearchMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantSearchMapViewController.m; sourceTree = "<group>"; };
+		40161954189C54770089C1B9 /* VenueSearchMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueSearchMapViewController.h; sourceTree = "<group>"; };
+		40161955189C54770089C1B9 /* VenueSearchMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueSearchMapViewController.m; sourceTree = "<group>"; };
 		40161959189C84F10089C1B9 /* VenueResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueResult.h; sourceTree = "<group>"; };
 		4016195A189C84F10089C1B9 /* VenueResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueResult.m; sourceTree = "<group>"; };
 		403DC6F9189A158F0023C197 /* VenueMapSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VenueMapSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,8 +51,8 @@
 		403DC706189A158F0023C197 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		403DC708189A158F0023C197 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		403DC70A189A158F0023C197 /* VenueMapSearch-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VenueMapSearch-Prefix.pch"; sourceTree = "<group>"; };
-		403DC70B189A158F0023C197 /* RestuarantSearchAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RestuarantSearchAppDelegate.h; sourceTree = "<group>"; };
-		403DC70C189A158F0023C197 /* RestuarantSearchAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RestuarantSearchAppDelegate.m; sourceTree = "<group>"; };
+		403DC70B189A158F0023C197 /* VenueMapSearchAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VenueMapSearchAppDelegate.h; sourceTree = "<group>"; };
+		403DC70C189A158F0023C197 /* VenueMapSearchAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VenueMapSearchAppDelegate.m; sourceTree = "<group>"; };
 		403DC70F189A158F0023C197 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		403DC717189A158F0023C197 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		403DC71D189A158F0023C197 /* VenueMapSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VenueMapSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,8 +95,8 @@
 		403DC6F0189A158F0023C197 = {
 			isa = PBXGroup;
 			children = (
-				403DC702189A158F0023C197 /* RestuarantSearch */,
-				403DC724189A158F0023C197 /* RestuarantSearchTests */,
+				403DC702189A158F0023C197 /* VenueMapSearchSearch */,
+				403DC724189A158F0023C197 /* VenueMapSearchTests */,
 				403DC6FB189A158F0023C197 /* Frameworks */,
 				403DC6FA189A158F0023C197 /* Products */,
 			);
@@ -125,19 +125,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		403DC702189A158F0023C197 /* RestuarantSearch */ = {
+		403DC702189A158F0023C197 /* VenueMapSearchSearch */ = {
 			isa = PBXGroup;
 			children = (
 				403DC70E189A158F0023C197 /* Main.storyboard */,
-				403DC70B189A158F0023C197 /* RestuarantSearchAppDelegate.h */,
-				403DC70C189A158F0023C197 /* RestuarantSearchAppDelegate.m */,
-				40161954189C54770089C1B9 /* RestaurantSearchMapViewController.h */,
-				40161955189C54770089C1B9 /* RestaurantSearchMapViewController.m */,
+				403DC70B189A158F0023C197 /* VenueMapSearchAppDelegate.h */,
+				403DC70C189A158F0023C197 /* VenueMapSearchAppDelegate.m */,
+				40161954189C54770089C1B9 /* VenueSearchMapViewController.h */,
+				40161955189C54770089C1B9 /* VenueSearchMapViewController.m */,
 				40161959189C84F10089C1B9 /* VenueResult.h */,
 				4016195A189C84F10089C1B9 /* VenueResult.m */,
 				403DC717189A158F0023C197 /* Images.xcassets */,
 				403DC703189A158F0023C197 /* Supporting Files */,
 			);
+			name = VenueMapSearchSearch;
 			path = RestuarantSearch;
 			sourceTree = "<group>";
 		};
@@ -153,12 +154,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		403DC724189A158F0023C197 /* RestuarantSearchTests */ = {
+		403DC724189A158F0023C197 /* VenueMapSearchTests */ = {
 			isa = PBXGroup;
 			children = (
 				403DC72A189A158F0023C197 /* RestuarantSearchTests.m */,
 				403DC725189A158F0023C197 /* Supporting Files */,
 			);
+			name = VenueMapSearchTests;
 			path = RestuarantSearchTests;
 			sourceTree = "<group>";
 		};
@@ -269,10 +271,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40161956189C54770089C1B9 /* RestaurantSearchMapViewController.m in Sources */,
+				40161956189C54770089C1B9 /* VenueSearchMapViewController.m in Sources */,
 				403DC709189A158F0023C197 /* main.m in Sources */,
 				4016195B189C84F10089C1B9 /* VenueResult.m in Sources */,
-				403DC70D189A158F0023C197 /* RestuarantSearchAppDelegate.m in Sources */,
+				403DC70D189A158F0023C197 /* VenueMapSearchAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
