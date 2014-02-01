@@ -217,7 +217,7 @@
                                  
                                  if (![results count]) {
                                      dispatch_async(dispatch_get_main_queue(), ^{
-                                         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No results found"
+                                         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No results found."
                                                                                          message:nil
                                                                                         delegate:nil
                                                                                cancelButtonTitle:@"OK"
