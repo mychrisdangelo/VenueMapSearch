@@ -140,11 +140,6 @@
 		403DC702189A158F0023C197 /* VenueMapSearchSearch */ = {
 			isa = PBXGroup;
 			children = (
-				403DC70E189A158F0023C197 /* Main.storyboard */,
-				407D4BFF189CCAB10013BDF4 /* VenueCategoryTableViewController.h */,
-				407D4C00189CCAB10013BDF4 /* VenueCategoryTableViewController.m */,
-				403DC70B189A158F0023C197 /* VenueMapSearchAppDelegate.h */,
-				403DC70C189A158F0023C197 /* VenueMapSearchAppDelegate.m */,
 				40161954189C54770089C1B9 /* VenueSearchMapViewController.h */,
 				40161955189C54770089C1B9 /* VenueSearchMapViewController.m */,
 				407D4BF9189CBD7F0013BDF4 /* VenueListTableViewController.h */,
@@ -154,6 +149,8 @@
 				40161959189C84F10089C1B9 /* VenueResult.h */,
 				4016195A189C84F10089C1B9 /* VenueResult.m */,
 				403DC717189A158F0023C197 /* Images.xcassets */,
+				4079ECC7189D72570010B85D /* Shared */,
+				4079ECC6189D721B0010B85D /* Unused */,
 				403DC703189A158F0023C197 /* Supporting Files */,
 			);
 			name = VenueMapSearchSearch;
@@ -163,7 +160,6 @@
 		403DC703189A158F0023C197 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				40161953189C543C0089C1B9 /* Constants.h */,
 				403DC704189A158F0023C197 /* VenueMapSearch-Info.plist */,
 				403DC705189A158F0023C197 /* InfoPlist.strings */,
 				403DC708189A158F0023C197 /* main.m */,
@@ -189,6 +185,26 @@
 				403DC727189A158F0023C197 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4079ECC6189D721B0010B85D /* Unused */ = {
+			isa = PBXGroup;
+			children = (
+				407D4BFF189CCAB10013BDF4 /* VenueCategoryTableViewController.h */,
+				407D4C00189CCAB10013BDF4 /* VenueCategoryTableViewController.m */,
+			);
+			name = Unused;
+			sourceTree = "<group>";
+		};
+		4079ECC7189D72570010B85D /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				403DC70E189A158F0023C197 /* Main.storyboard */,
+				40161953189C543C0089C1B9 /* Constants.h */,
+				403DC70B189A158F0023C197 /* VenueMapSearchAppDelegate.h */,
+				403DC70C189A158F0023C197 /* VenueMapSearchAppDelegate.m */,
+			);
+			name = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

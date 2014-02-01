@@ -41,7 +41,6 @@
     
     _searchResults = [venueResultsMutable copy];
     
-
     [self.mapView removeAnnotations:self.mapView.annotations];
     [self.mapView addAnnotations:_searchResults];
     [self updateRegion];
@@ -158,6 +157,8 @@
     }
     
     [self.mapView setDelegate:self];
+    
+    self.searchCategory = kSearchQueryTypeDefault;
 }
 
 - (void)setupSearchBar
@@ -187,8 +188,8 @@
     // search 1 km
     [GoogleMapManager nearestVenuesForLatLong:self.userLocation
                                  withinRadius:kSearchRadiusMeters
-                                     forQuery:self.searchCategory
-                                    queryType:kSearchQueryType
+                                     forQuery:searchString
+                                    queryType:self.searchCategory
                              googleMapsAPIKey:kGoogleApiPlacesKey
                              searchCompletion:^(NSMutableArray *results) {
                                  

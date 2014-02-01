@@ -6,8 +6,15 @@ Assignment 1
 
 Description:
 
+Category Selection was created and later abandoned because it is
+not a requirement of the Google Places API. IB element was removed but
+the code remains
 
+You may view the search results as a list by pressing the list icon in
+the lower right hand of the map icon.
 
+Each venue with a pin in the map can be selected and minimal information
+can be looked at by pressing the callout.
 
 
 Sources:
