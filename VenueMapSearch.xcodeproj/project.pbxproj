@@ -43,21 +43,21 @@
 		40161955189C54770089C1B9 /* RestaurantSearchMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantSearchMapViewController.m; sourceTree = "<group>"; };
 		40161959189C84F10089C1B9 /* VenueResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueResult.h; sourceTree = "<group>"; };
 		4016195A189C84F10089C1B9 /* VenueResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueResult.m; sourceTree = "<group>"; };
-		403DC6F9189A158F0023C197 /* RestaurantSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestaurantSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		403DC6F9189A158F0023C197 /* VenueMapSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VenueMapSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		403DC6FC189A158F0023C197 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		403DC6FE189A158F0023C197 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		403DC700189A158F0023C197 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		403DC704189A158F0023C197 /* RestaurantSearch-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RestaurantSearch-Info.plist"; sourceTree = "<group>"; };
+		403DC704189A158F0023C197 /* VenueMapSearch-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VenueMapSearch-Info.plist"; sourceTree = "<group>"; };
 		403DC706189A158F0023C197 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		403DC708189A158F0023C197 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		403DC70A189A158F0023C197 /* RestaurantSearch-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RestaurantSearch-Prefix.pch"; sourceTree = "<group>"; };
+		403DC70A189A158F0023C197 /* VenueMapSearch-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VenueMapSearch-Prefix.pch"; sourceTree = "<group>"; };
 		403DC70B189A158F0023C197 /* RestuarantSearchAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RestuarantSearchAppDelegate.h; sourceTree = "<group>"; };
 		403DC70C189A158F0023C197 /* RestuarantSearchAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RestuarantSearchAppDelegate.m; sourceTree = "<group>"; };
 		403DC70F189A158F0023C197 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		403DC717189A158F0023C197 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		403DC71D189A158F0023C197 /* RestaurantSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestaurantSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		403DC71D189A158F0023C197 /* VenueMapSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VenueMapSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		403DC71E189A158F0023C197 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		403DC726189A158F0023C197 /* RestaurantSearchTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RestaurantSearchTests-Info.plist"; sourceTree = "<group>"; };
+		403DC726189A158F0023C197 /* VenueMapSearchTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VenueMapSearchTests-Info.plist"; sourceTree = "<group>"; };
 		403DC728189A158F0023C197 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		403DC72A189A158F0023C197 /* RestuarantSearchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RestuarantSearchTests.m; sourceTree = "<group>"; };
 		403DC734189A16160023C197 /* COMSMapManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = COMSMapManager.framework; sourceTree = "<group>"; };
@@ -105,8 +105,8 @@
 		403DC6FA189A158F0023C197 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				403DC6F9189A158F0023C197 /* RestaurantSearch.app */,
-				403DC71D189A158F0023C197 /* RestaurantSearchTests.xctest */,
+				403DC6F9189A158F0023C197 /* VenueMapSearch.app */,
+				403DC71D189A158F0023C197 /* VenueMapSearchTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -145,10 +145,10 @@
 			isa = PBXGroup;
 			children = (
 				40161953189C543C0089C1B9 /* Constants.h */,
-				403DC704189A158F0023C197 /* RestaurantSearch-Info.plist */,
+				403DC704189A158F0023C197 /* VenueMapSearch-Info.plist */,
 				403DC705189A158F0023C197 /* InfoPlist.strings */,
 				403DC708189A158F0023C197 /* main.m */,
-				403DC70A189A158F0023C197 /* RestaurantSearch-Prefix.pch */,
+				403DC70A189A158F0023C197 /* VenueMapSearch-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -165,7 +165,7 @@
 		403DC725189A158F0023C197 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				403DC726189A158F0023C197 /* RestaurantSearchTests-Info.plist */,
+				403DC726189A158F0023C197 /* VenueMapSearchTests-Info.plist */,
 				403DC727189A158F0023C197 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -174,9 +174,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		403DC6F8189A158F0023C197 /* RestaurantSearch */ = {
+		403DC6F8189A158F0023C197 /* VenueMapSearch */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 403DC72E189A158F0023C197 /* Build configuration list for PBXNativeTarget "RestaurantSearch" */;
+			buildConfigurationList = 403DC72E189A158F0023C197 /* Build configuration list for PBXNativeTarget "VenueMapSearch" */;
 			buildPhases = (
 				403DC6F5189A158F0023C197 /* Sources */,
 				403DC6F6189A158F0023C197 /* Frameworks */,
@@ -186,14 +186,14 @@
 			);
 			dependencies = (
 			);
-			name = RestaurantSearch;
+			name = VenueMapSearch;
 			productName = RestuarantSearch;
-			productReference = 403DC6F9189A158F0023C197 /* RestaurantSearch.app */;
+			productReference = 403DC6F9189A158F0023C197 /* VenueMapSearch.app */;
 			productType = "com.apple.product-type.application";
 		};
-		403DC71C189A158F0023C197 /* RestaurantSearchTests */ = {
+		403DC71C189A158F0023C197 /* VenueMapSearchTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 403DC731189A158F0023C197 /* Build configuration list for PBXNativeTarget "RestaurantSearchTests" */;
+			buildConfigurationList = 403DC731189A158F0023C197 /* Build configuration list for PBXNativeTarget "VenueMapSearchTests" */;
 			buildPhases = (
 				403DC719189A158F0023C197 /* Sources */,
 				403DC71A189A158F0023C197 /* Frameworks */,
@@ -204,9 +204,9 @@
 			dependencies = (
 				403DC723189A158F0023C197 /* PBXTargetDependency */,
 			);
-			name = RestaurantSearchTests;
+			name = VenueMapSearchTests;
 			productName = RestuarantSearchTests;
-			productReference = 403DC71D189A158F0023C197 /* RestaurantSearchTests.xctest */;
+			productReference = 403DC71D189A158F0023C197 /* VenueMapSearchTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -224,7 +224,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 403DC6F4189A158F0023C197 /* Build configuration list for PBXProject "RestaurantSearch" */;
+			buildConfigurationList = 403DC6F4189A158F0023C197 /* Build configuration list for PBXProject "VenueMapSearch" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -237,8 +237,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				403DC6F8189A158F0023C197 /* RestaurantSearch */,
-				403DC71C189A158F0023C197 /* RestaurantSearchTests */,
+				403DC6F8189A158F0023C197 /* VenueMapSearch */,
+				403DC71C189A158F0023C197 /* VenueMapSearchTests */,
 			);
 		};
 /* End PBXProject section */
@@ -289,7 +289,7 @@
 /* Begin PBXTargetDependency section */
 		403DC723189A158F0023C197 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 403DC6F8189A158F0023C197 /* RestaurantSearch */;
+			target = 403DC6F8189A158F0023C197 /* VenueMapSearch */;
 			targetProxy = 403DC722189A158F0023C197 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -404,9 +404,9 @@
 					"/Users/chrisdangelo/Dropbox/Columbia\\ University/CN&MC/Homework/hw1/RestuarantSearch",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "RestuarantSearch/RestaurantSearch-Prefix.pch";
-				INFOPLIST_FILE = "RestuarantSearch/RestaurantSearch-Info.plist";
-				PRODUCT_NAME = RestaurantSearch;
+				GCC_PREFIX_HEADER = "RestuarantSearch/VenueMapSearch-Prefix.pch";
+				INFOPLIST_FILE = "RestuarantSearch/VenueMapSearch-Info.plist";
+				PRODUCT_NAME = VenueMapSearch;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -421,9 +421,9 @@
 					"/Users/chrisdangelo/Dropbox/Columbia\\ University/CN&MC/Homework/hw1/RestuarantSearch",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "RestuarantSearch/RestaurantSearch-Prefix.pch";
-				INFOPLIST_FILE = "RestuarantSearch/RestaurantSearch-Info.plist";
-				PRODUCT_NAME = RestaurantSearch;
+				GCC_PREFIX_HEADER = "RestuarantSearch/VenueMapSearch-Prefix.pch";
+				INFOPLIST_FILE = "RestuarantSearch/VenueMapSearch-Info.plist";
+				PRODUCT_NAME = VenueMapSearch;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -444,8 +444,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "RestuarantSearchTests/RestaurantSearchTests-Info.plist";
-				PRODUCT_NAME = RestaurantSearchTests;
+				INFOPLIST_FILE = "RestuarantSearchTests/VenueMapSearchTests-Info.plist";
+				PRODUCT_NAME = VenueMapSearchTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -463,8 +463,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RestuarantSearch/RestuarantSearch-Prefix.pch";
-				INFOPLIST_FILE = "RestuarantSearchTests/RestaurantSearchTests-Info.plist";
-				PRODUCT_NAME = RestaurantSearchTests;
+				INFOPLIST_FILE = "RestuarantSearchTests/VenueMapSearchTests-Info.plist";
+				PRODUCT_NAME = VenueMapSearchTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -473,7 +473,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		403DC6F4189A158F0023C197 /* Build configuration list for PBXProject "RestaurantSearch" */ = {
+		403DC6F4189A158F0023C197 /* Build configuration list for PBXProject "VenueMapSearch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				403DC72C189A158F0023C197 /* Debug */,
@@ -482,7 +482,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		403DC72E189A158F0023C197 /* Build configuration list for PBXNativeTarget "RestaurantSearch" */ = {
+		403DC72E189A158F0023C197 /* Build configuration list for PBXNativeTarget "VenueMapSearch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				403DC72F189A158F0023C197 /* Debug */,
@@ -491,7 +491,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		403DC731189A158F0023C197 /* Build configuration list for PBXNativeTarget "RestaurantSearchTests" */ = {
+		403DC731189A158F0023C197 /* Build configuration list for PBXNativeTarget "VenueMapSearchTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				403DC732189A158F0023C197 /* Debug */,
