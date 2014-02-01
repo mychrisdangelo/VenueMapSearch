@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
+#import <COMSMapManager/COMSMapManager.h>
 
-@interface RestuarantSearchMasterViewController : UITableViewController
+#define kGoogleApiPlacesKey @"AIzaSyDVGFSM_b2vPpZUSJsK0TNFG3cYBkZwVAY"
+
+@interface RestuarantSearchMasterViewController : UITableViewController <CLLocationManagerDelegate>
 
 @end

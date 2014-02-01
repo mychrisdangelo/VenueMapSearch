@@ -7,12 +7,14 @@
 //
 
 #import "RestuarantSearchMasterViewController.h"
-
 #import "RestuarantSearchDetailViewController.h"
 
 @interface RestuarantSearchMasterViewController () {
     NSMutableArray *_objects;
+    BOOL doneOnce;;
 }
+
+@property (nonatomic, strong) CLLocationManager *locationManager;
 @end
 
 @implementation RestuarantSearchMasterViewController
@@ -30,6 +32,17 @@
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
+
+    doneOnce = false;
+    
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate = self;
+    self.locationManager.distanceFilter = kCLDistanceFilterNone;
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
+    [self.locationManager startUpdatingLocation];
+    
+#warning todo - check for authorization and if location is on device etc.
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -108,6 +121,28 @@
         NSDate *object = _objects[indexPath.row];
         [[segue destinationViewController] setDetailItem:object];
     }
+}
+
+#pragma mark - Location Manager Delegate
+
+- (void)locationManager:(CLLocationManager *)manager
+    didUpdateToLocation:(CLLocation *)newLocation
+           fromLocation:(CLLocation *)oldLocation
+{
+    if(!doneOnce)
+    {
+        [GoogleMapManager nearestVenuesForLatLong:newLocation.coordinate
+                                     withinRadius:3000
+                                         forQuery:@"pizza"
+                                        queryType:@"restaurant"
+                                 googleMapsAPIKey:kGoogleApiPlacesKey
+                                 searchCompletion:^(NSMutableArray *results) {
+                                     NSLog(@"%@", results);
+                                 }];
+        doneOnce = true;
+        [self.locationManager stopUpdatingLocation];
+    }
+
 }
 
 @end
