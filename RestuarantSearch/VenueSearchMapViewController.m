@@ -16,6 +16,7 @@
 @property (nonatomic, strong) NSArray *searchResults;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (nonatomic) BOOL isLocationServicesAllowed;
+@property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
 
 @end
 
@@ -34,15 +35,43 @@
     for (NSDictionary *each in searchResults) {
         VenueResult *vr = [[VenueResult alloc] initWithMapManagerDictionary:each];
         [venueResultsMutable addObject:vr];
-        [self.mapView addAnnotation:vr];
     }
     
     _searchResults = [venueResultsMutable copy];
     
 
-    
     [self.mapView removeAnnotations:self.mapView.annotations];
     [self.mapView addAnnotations:_searchResults];
+    [self updateRegion];
+}
+
+// from Stanford Fall '13
+// a bit of a hack. the annotations will not refresh unless there is reason to
+// so this serves the purpose of forcing a redraw of the pins
+- (void)updateRegion
+{
+    CGRect boundingRect;
+    BOOL started = NO;
+    for (id <MKAnnotation> annotation in self.mapView.annotations) {
+        CGRect annotationRect = CGRectMake(annotation.coordinate.latitude, annotation.coordinate.longitude, 0, 0);
+        if (!started) {
+            started = YES;
+            boundingRect = annotationRect;
+        } else {
+            boundingRect = CGRectUnion(boundingRect, annotationRect);
+        }
+    }
+    if (started) {
+        boundingRect = CGRectInset(boundingRect, -0.02, -0.02);
+        if ((boundingRect.size.width < 20) && (boundingRect.size.height < 20)) {
+            MKCoordinateRegion region;
+            region.center.latitude = boundingRect.origin.x + boundingRect.size.width / 2;
+            region.center.longitude = boundingRect.origin.y + boundingRect.size.height / 2;
+            region.span.latitudeDelta = boundingRect.size.width;
+            region.span.longitudeDelta = boundingRect.size.height;
+            [self.mapView setRegion:region animated:YES];
+        }
+    }
 }
 
 - (BOOL)isLocationServicesAllowed
@@ -95,10 +124,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    // position searchBar. not interested in search result functionality so remove the delegation
-    [self.searchDisplayController setDisplaysSearchBarInNavigationBar:YES];
-    [self.searchDisplayController setSearchResultsDataSource:nil];
-    [self.searchDisplayController setSearchResultsDelegate:nil];
+    [self setupSearchBar];
     
     // start by locating user's current position
     if (self.isLocationServicesAllowed) {
@@ -108,7 +134,22 @@
     }
     
     [self.mapView setDelegate:self];
+}
 
+- (void)setupSearchBar
+{
+    // position searchBar. not interested in search result functionality so remove the delegation
+    //    [self.searchDisplayController setDisplaysSearchBarInNavigationBar:YES];
+    //    [self.searchDisplayController setSearchResultsDataSource:nil];
+    //    [self.searchDisplayController setSearchResultsDelegate:nil];
+    
+    // this is a hack. would prefer to use searchDisplayController but
+    // it requires tableivew
+    [self.searchBar sizeToFit];
+    UIView *barWrapper = [[UIView alloc]initWithFrame:self.searchBar.frame];
+    [barWrapper setBackgroundColor:[UIColor clearColor]];
+    [barWrapper addSubview:self.searchBar];
+    self.navigationItem.titleView = barWrapper;
 }
 
 - (void)didReceiveMemoryWarning
@@ -137,6 +178,7 @@
                                                                           cancelButtonTitle:@"OK"
                                                                           otherButtonTitles:nil];
                                     [alert show];
+#warning TODO this alert is blocking the main thread!
                                  }
                              }];
 
@@ -159,7 +201,7 @@
     boundingRegion.span.latitudeDelta = 0.082872;
     boundingRegion.span.longitudeDelta = 0.090863;
     
-    [self.mapView setRegion:boundingRegion];
+    [self.mapView setRegion:boundingRegion animated:YES];
 }
 
 #pragma mark - UISearchBarDelegate
@@ -181,6 +223,11 @@
 - (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar
 {
     [searchBar setShowsCancelButton:NO animated:YES];
+}
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *) searchBar
+{
+    [searchBar resignFirstResponder];
 }
 
 #pragma mark - UISearchDisplayControllerDelegate

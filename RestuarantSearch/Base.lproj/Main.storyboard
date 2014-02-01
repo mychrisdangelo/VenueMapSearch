@@ -63,31 +63,18 @@
                     <navigationItem key="navigationItem" id="0mw-nK-XMa"/>
                     <connections>
                         <outlet property="mapView" destination="gWa-qS-Fex" id="8ir-4a-ifn"/>
-                        <outlet property="searchDisplayController" destination="0S3-Ne-c3r" id="ISV-KI-Ciy"/>
+                        <outlet property="searchBar" destination="imx-5E-iPw" id="Niz-7a-Wef"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XPR-B4-XOg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchBar contentMode="redraw" placeholder="Search Venues" id="OcX-7r-bYK">
+                <searchBar contentMode="redraw" searchBarStyle="minimal" id="imx-5E-iPw">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <textInputTraits key="textInputTraits"/>
-                    <scopeButtonTitles>
-                        <string>Title</string>
-                        <string>Title</string>
-                    </scopeButtonTitles>
                     <connections>
-                        <outlet property="delegate" destination="MYQ-k3-Yrm" id="Dnv-m6-Uwt"/>
+                        <outlet property="delegate" destination="MYQ-k3-Yrm" id="VYr-rJ-GX6"/>
                     </connections>
                 </searchBar>
-                <searchDisplayController id="0S3-Ne-c3r">
-                    <connections>
-                        <outlet property="delegate" destination="MYQ-k3-Yrm" id="Jdk-Fc-gTq"/>
-                        <outlet property="searchBar" destination="OcX-7r-bYK" id="84a-C7-FcQ"/>
-                        <outlet property="searchContentsController" destination="MYQ-k3-Yrm" id="bRb-hW-wUA"/>
-                        <outlet property="searchResultsDataSource" destination="MYQ-k3-Yrm" id="UGH-1M-7OT"/>
-                        <outlet property="searchResultsDelegate" destination="MYQ-k3-Yrm" id="RCc-M4-8Kj"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="543" y="64"/>
         </scene>
