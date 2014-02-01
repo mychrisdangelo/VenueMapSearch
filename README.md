@@ -7,6 +7,10 @@ cd2665@columbia.edu
 Cellular Networks & Mobile Computing  
 Assignment 1  
 
+Demo
+====
+<p align="center"><img src="https://github.com/mychrisdangelo/VenueMapSearch/master/github-assets/quick-tour.gif"/></p>
+
 Description
 ==========
 

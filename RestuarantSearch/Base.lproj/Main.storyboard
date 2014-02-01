@@ -57,12 +57,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5is-qk-mZg">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5is-qk-mZg">
                                 <rect key="frame" x="255" y="505" width="45" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="45" id="5uR-Zz-zMH"/>
-                                </constraints>
                                 <state key="normal" image="ShowList">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -73,13 +70,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="5is-qk-mZg" secondAttribute="trailing" constant="20" symbolic="YES" id="LLC-dE-PPw"/>
-                            <constraint firstItem="gWa-qS-Fex" firstAttribute="leading" secondItem="anZ-HT-cAx" secondAttribute="leading" id="Y2H-U6-nrk"/>
-                            <constraint firstItem="gWa-qS-Fex" firstAttribute="top" secondItem="anZ-HT-cAx" secondAttribute="top" id="czT-AU-haR"/>
-                            <constraint firstItem="5is-qk-mZg" firstAttribute="top" secondItem="QRw-bn-5Bu" secondAttribute="bottom" constant="441" id="dZk-a8-Cf1"/>
-                            <constraint firstAttribute="trailing" secondItem="gWa-qS-Fex" secondAttribute="trailing" id="nDG-n7-v8S"/>
-                            <constraint firstItem="LAG-lw-hhP" firstAttribute="top" secondItem="5is-qk-mZg" secondAttribute="bottom" constant="18" id="vXk-bV-JXE"/>
-                            <constraint firstAttribute="bottom" secondItem="gWa-qS-Fex" secondAttribute="bottom" id="yhb-7I-78Y"/>
+                            <constraint firstItem="gWa-qS-Fex" firstAttribute="leading" secondItem="anZ-HT-cAx" secondAttribute="leading" id="8yQ-CU-WtE"/>
+                            <constraint firstAttribute="trailing" secondItem="5is-qk-mZg" secondAttribute="trailing" constant="20" id="9EG-9W-HSo"/>
+                            <constraint firstItem="LAG-lw-hhP" firstAttribute="top" secondItem="5is-qk-mZg" secondAttribute="bottom" constant="18" id="Gsx-Y8-1Jh"/>
+                            <constraint firstItem="gWa-qS-Fex" firstAttribute="top" secondItem="anZ-HT-cAx" secondAttribute="top" id="Zvg-Hs-0TD"/>
+                            <constraint firstItem="LAG-lw-hhP" firstAttribute="top" secondItem="gWa-qS-Fex" secondAttribute="bottom" id="kS7-Jz-Owi"/>
+                            <constraint firstAttribute="trailing" secondItem="gWa-qS-Fex" secondAttribute="trailing" id="t3x-PL-lWY"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
