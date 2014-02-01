@@ -216,20 +216,16 @@
                                  [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
                                  
                                  if (![results count]) {
-                                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No results found"
-                                                                                    message:nil
-                                                                                   delegate:nil
-                                                                          cancelButtonTitle:@"OK"
-                                                                          otherButtonTitles:nil];
-                                    [alert show];
-#warning TODO this alert is blocking the main thread!
-
+                                     dispatch_async(dispatch_get_main_queue(), ^{
+                                         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No results found"
+                                                                                         message:nil
+                                                                                        delegate:nil
+                                                                               cancelButtonTitle:@"OK"
+                                                                               otherButtonTitles:nil];
+                                         [alert show];
+                                     });
                                  }
-                                
-
                              }];
-
-
     
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
 }
