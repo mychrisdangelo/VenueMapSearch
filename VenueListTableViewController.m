@@ -7,6 +7,7 @@
 //
 
 #import "VenueListTableViewController.h"
+#import "VenueDetailTableViewController.h"
 
 @interface VenueListTableViewController ()
 
@@ -39,6 +40,21 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"ShowVenueDetail"]) {
+        if ([segue.destinationViewController isKindOfClass:[VenueDetailTableViewController class]]) {
+            VenueDetailTableViewController *vdtvc = (VenueDetailTableViewController *)segue.destinationViewController;
+
+            if ([sender isKindOfClass:[UITableViewCell class]]) {
+                UITableViewCell *tvc = (UITableViewCell *)sender;
+                NSIndexPath *indexPath = [self.tableView indexPathForCell:tvc];
+                vdtvc.venue = self.searchResults[indexPath.row];
+            }
+        }
+    }
 }
 
 #pragma mark - Table view data source

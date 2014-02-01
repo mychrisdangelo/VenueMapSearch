@@ -133,11 +133,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="VenueListTableViewControllerCell" textLabel="dWO-11-goz" detailTextLabel="OVs-Xz-wTl" style="IBUITableViewCellStyleSubtitle" id="KLe-ef-c6g">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="VenueListTableViewControllerCell" textLabel="dWO-11-goz" detailTextLabel="OVs-Xz-wTl" style="IBUITableViewCellStyleSubtitle" id="KLe-ef-c6g">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KLe-ef-c6g" id="Wpv-Ja-54N">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dWO-11-goz">
@@ -157,7 +157,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Z0X-5T-gnY" kind="push" id="5pF-mB-veF"/>
+                                    <segue destination="Z0X-5T-gnY" kind="push" identifier="ShowVenueDetail" id="GWw-TD-Gcq"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -228,6 +228,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="j7I-0u-EfL"/>
+        <segue reference="GWw-TD-Gcq"/>
     </inferredMetricsTieBreakers>
 </document>
