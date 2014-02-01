@@ -105,6 +105,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="0mw-nK-XMa"/>
                     <connections>
+                        <outlet property="mapView" destination="gWa-qS-Fex" id="8ir-4a-ifn"/>
                         <outlet property="searchDisplayController" destination="0S3-Ne-c3r" id="ISV-KI-Ciy"/>
                     </connections>
                 </viewController>

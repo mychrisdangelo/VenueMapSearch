@@ -13,6 +13,8 @@
 
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic) CLLocationCoordinate2D userLocation;
+@property (nonatomic, strong) NSArray *searchResults;
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @end
 
@@ -60,23 +62,36 @@
                              googleMapsAPIKey:kGoogleApiPlacesKey
                              searchCompletion:^(NSMutableArray *results) {
                                  NSLog(@"%@", results);
-                                 [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+
+                                [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+                                 if (![results count]) {
+                                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No results found"
+                                                                                    message:nil
+                                                                                   delegate:nil
+                                                                          cancelButtonTitle:@"OK"
+                                                                          otherButtonTitles:nil];
+                                    [alert show];
+                                 }
                              }];
 
+    // confine the map search area to the user's current location
+    MKCoordinateRegion boundingRegion;
+    boundingRegion.center.latitude = self.userLocation.latitude;
+    boundingRegion.center.longitude = self.userLocation.longitude;
+    
+    // setup the area spanned by the map region:
+    // we use the delta values to indicate the desired zoom level of the map,
+    //      (smaller delta values corresponding to a higher zoom level)
+    
+    boundingRegion.span.latitudeDelta = 0.112872;
+    boundingRegion.span.longitudeDelta = 0.109863;
+    
+    [self.mapView setRegion:boundingRegion];
+    
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
 }
 
-//// confine the map search area to the user's current location
-//MKCoordinateRegion newRegion;
-//newRegion.center.latitude = self.userLocation.latitude;
-//newRegion.center.longitude = self.userLocation.longitude;
-//
-//// setup the area spanned by the map region:
-//// we use the delta values to indicate the desired zoom level of the map,
-////      (smaller delta values corresponding to a higher zoom level)
-////
-//newRegion.span.latitudeDelta = 0.112872;
-//newRegion.span.longitudeDelta = 0.109863;
+
 //
 //MKLocalSearchRequest *request = [[MKLocalSearchRequest alloc] init];
 //

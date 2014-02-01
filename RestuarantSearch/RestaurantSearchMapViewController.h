@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import <COMSMapManager/COMSMapManager.h>
+#import <MapKit/MapKit.h>
 #import "Constants.h"
 
 @interface RestaurantSearchMapViewController : UIViewController <UISearchDisplayDelegate, UISearchBarDelegate, CLLocationManagerDelegate>
