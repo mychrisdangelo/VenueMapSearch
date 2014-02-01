@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "403DC6F8189A158F0023C197"
-               BuildableName = "RestuarantSearch.app"
+               BuildableName = "VenueMapSearch.app"
                BlueprintName = "VenueMapSearch"
                ReferencedContainer = "container:VenueMapSearch.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "403DC71C189A158F0023C197"
-               BuildableName = "RestuarantSearchTests.xctest"
+               BuildableName = "VenueMapSearchTests.xctest"
                BlueprintName = "VenueMapSearchTests"
                ReferencedContainer = "container:VenueMapSearch.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "403DC6F8189A158F0023C197"
-            BuildableName = "RestuarantSearch.app"
+            BuildableName = "VenueMapSearch.app"
             BlueprintName = "VenueMapSearch"
             ReferencedContainer = "container:VenueMapSearch.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "403DC6F8189A158F0023C197"
-            BuildableName = "RestuarantSearch.app"
+            BuildableName = "VenueMapSearch.app"
             BlueprintName = "VenueMapSearch"
             ReferencedContainer = "container:VenueMapSearch.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "403DC6F8189A158F0023C197"
-            BuildableName = "RestuarantSearch.app"
+            BuildableName = "VenueMapSearch.app"
             BlueprintName = "VenueMapSearch"
             ReferencedContainer = "container:VenueMapSearch.xcodeproj">
          </BuildableReference>
