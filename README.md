@@ -9,7 +9,7 @@ Assignment 1
 
 Demo
 ====
-<p align="center"><img src="https://github.com/mychrisdangelo/VenueMapSearch/tree/master/github-assets/quick-tour.gif"/></p>
+![alt tag](github-assets/quick-tour.gif)
 
 Description
 ==========
