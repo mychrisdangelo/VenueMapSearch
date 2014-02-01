@@ -70,9 +70,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem image="Show List" id="oUO-IH-b1g"/>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="0mw-nK-XMa"/>
                     <connections>
                         <outlet property="mapView" destination="gWa-qS-Fex" id="8ir-4a-ifn"/>
@@ -96,7 +94,7 @@
         <scene sceneID="9dC-fO-Whz">
             <objects>
                 <tableViewController id="IXh-Fc-15v" customClass="VenueCategoryTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="7YQ-66-jeh" customClass="VenuCategoryTableViewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="7YQ-66-jeh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -219,7 +217,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Show List" width="39" height="33"/>
         <image name="ShowList" width="39" height="33"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -228,6 +225,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="GWw-TD-Gcq"/>
+        <segue reference="j7I-0u-EfL"/>
     </inferredMetricsTieBreakers>
 </document>
