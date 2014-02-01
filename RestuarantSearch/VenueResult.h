@@ -11,8 +11,8 @@
 
 #define kVenueResultGeometry @"geometry"
 #define kVenueResultGeometryLocation @"location"
-#define kVenueResultGeometryLatitude @"lat"
-#define kVenueResultGeometryLongitude @"lng"
+#define kVenueResultGeometryLocationLatitude @"lat"
+#define kVenueResultGeometryLocationLongitude @"lng"
 #define kVenueResultIcon @"icon"
 #define kVenueResultId @"id"
 #define kVenueResultName @"name"

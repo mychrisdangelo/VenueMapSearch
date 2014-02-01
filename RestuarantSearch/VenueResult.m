@@ -16,15 +16,14 @@
     self = [super init];
     if (self) {
 		
-        VenueResult *vr = [[VenueResult alloc] init];
-        vr.name = MapManagerDictionary[kVenueResultName];
+        self.name = MapManagerDictionary[kVenueResultName];
         
         CLLocationCoordinate2D tmpLocation;
-        tmpLocation.latitude = (CLLocationDegrees)[MapManagerDictionary[kVenueResultGeometryLocation][kVenueResultGeometryLocation][kVenueResultGeometryLatitude] doubleValue];
-        tmpLocation.latitude = (CLLocationDegrees)[MapManagerDictionary[kVenueResultGeometryLocation][kVenueResultGeometryLocation][kVenueResultGeometryLongitude] doubleValue];
-        vr.location = tmpLocation;
+        tmpLocation.latitude = (CLLocationDegrees)[MapManagerDictionary[kVenueResultGeometry][kVenueResultGeometryLocation][kVenueResultGeometryLocationLatitude] doubleValue];
+        tmpLocation.longitude = (CLLocationDegrees)[MapManagerDictionary[kVenueResultGeometry][kVenueResultGeometryLocation][kVenueResultGeometryLocationLongitude] doubleValue];
+        self.location = tmpLocation;
         
-        vr.vicinity = MapManagerDictionary[kVenueResultVicinity];
+        self.vicinity = MapManagerDictionary[kVenueResultVicinity];
         
         // TODO other attributes
 		

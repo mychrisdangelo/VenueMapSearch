@@ -35,12 +35,13 @@
     for (NSDictionary *each in searchResults) {
         VenueResult *vr = [[VenueResult alloc] initWithMapManagerDictionary:each];
         [venueResultsMutable addObject:vr];
+        [self.mapView addAnnotation:vr];
     }
     
     _searchResults = [venueResultsMutable copy];
     
-    [self.mapView removeAnnotations:self.mapView.annotations];
-    [self.mapView addAnnotations:_searchResults];
+//    [self.mapView removeAnnotations:self.mapView.annotations];
+//    [self.mapView addAnnotations:_searchResults];
 }
 
 - (BOOL)isLocationServicesAllowed
@@ -104,6 +105,8 @@
         self.locationManager.delegate = self;
         [self.locationManager startUpdatingLocation];
     }
+    
+    [self.mapView setDelegate:self];
 }
 
 - (void)didReceiveMemoryWarning
@@ -121,11 +124,10 @@
                                     queryType:kSearchQueryType
                              googleMapsAPIKey:kGoogleApiPlacesKey
                              searchCompletion:^(NSMutableArray *results) {
-                                 NSLog(@"%@", results);
                                  
                                  [self setSearchResults:results];
-
-                                [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+                                 [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+                                 
                                  if (![results count]) {
                                     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No results found"
                                                                                     message:nil
@@ -152,53 +154,11 @@
     // we use the delta values to indicate the desired zoom level of the map,
     //      (smaller delta values corresponding to a higher zoom level)
     
-    boundingRegion.span.latitudeDelta = 0.112872;
-    boundingRegion.span.longitudeDelta = 0.109863;
+    boundingRegion.span.latitudeDelta = 0.082872;
+    boundingRegion.span.longitudeDelta = 0.090863;
     
     [self.mapView setRegion:boundingRegion];
 }
-
-//
-//MKLocalSearchRequest *request = [[MKLocalSearchRequest alloc] init];
-//
-//request.naturalLanguageQuery = searchString;
-//request.region = newRegion;
-//
-//
-//
-//if (self.localSearch != nil)
-//{
-//    self.localSearch = nil;
-//}
-//self.localSearch = [[MKLocalSearch alloc] initWithRequest:request];
-//
-//[self.localSearch startWithCompletionHandler:completionHandler];
-
-//MKLocalSearchCompletionHandler completionHandler = ^(MKLocalSearchResponse *response, NSError *error)
-//{
-//    if (error != nil)
-//    {
-//        NSString *errorStr = [[error userInfo] valueForKey:NSLocalizedDescriptionKey];
-//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Could not find places"
-//                                                        message:errorStr
-//                                                       delegate:nil
-//                                              cancelButtonTitle:@"OK"
-//                                              otherButtonTitles:nil];
-//        [alert show];
-//    }
-//    else
-//    {
-//        self.places = [response mapItems];
-//        
-//        // used for later when setting the map's region in "prepareForSegue"
-//        self.boundingRegion = response.boundingRegion;
-//        
-//        self.viewAllButton.enabled = self.places != nil ? YES : NO;
-//        
-//        [self.tableView reloadData];
-//    }
-//    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-//};
 
 #pragma mark - UISearchBarDelegate
 
@@ -245,7 +205,25 @@
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
     // report any errors returned back from Location Services
-    NSLog(@"Error! %s", __PRETTY_FUNCTION__);
+    NSLog(@"%s: %@", __PRETTY_FUNCTION__, [error userInfo]);
+}
+
+#pragma mark - MKMapViewDelegate
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
+{
+	MKPinAnnotationView *annotationView = nil;
+	if ([annotation isKindOfClass:[VenueResult class]])
+	{
+		annotationView = (MKPinAnnotationView *)[self.mapView dequeueReusableAnnotationViewWithIdentifier:@"Pin"];
+		if (annotationView == nil)
+		{
+			annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"Pin"];
+			annotationView.canShowCallout = YES;
+			annotationView.animatesDrop = YES;
+		}
+	}
+	return annotationView;
 }
 
 @end
