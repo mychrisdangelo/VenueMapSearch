@@ -25,6 +25,7 @@
 		403DC735189A16160023C197 /* COMSMapManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 403DC734189A16160023C197 /* COMSMapManager.framework */; };
 		403DC739189A19ED0023C197 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 403DC738189A19ED0023C197 /* CoreLocation.framework */; };
 		403DC73B189A1AE20023C197 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 403DC73A189A1AE20023C197 /* MapKit.framework */; };
+		407D4BF8189CAE6D0013BDF4 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 407D4BF7189CAE6D0013BDF4 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		403DC734189A16160023C197 /* COMSMapManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = COMSMapManager.framework; sourceTree = "<group>"; };
 		403DC738189A19ED0023C197 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		403DC73A189A1AE20023C197 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		407D4BF7189CAE6D0013BDF4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = RestuarantSearch/README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 		403DC6F0189A158F0023C197 = {
 			isa = PBXGroup;
 			children = (
+				407D4BF7189CAE6D0013BDF4 /* README.md */,
 				403DC702189A158F0023C197 /* VenueMapSearchSearch */,
 				403DC724189A158F0023C197 /* VenueMapSearchTests */,
 				403DC6FB189A158F0023C197 /* Frameworks */,
@@ -252,6 +255,7 @@
 			files = (
 				403DC718189A158F0023C197 /* Images.xcassets in Resources */,
 				403DC707189A158F0023C197 /* InfoPlist.strings in Resources */,
+				407D4BF8189CAE6D0013BDF4 /* README.md in Resources */,
 				403DC710189A158F0023C197 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
