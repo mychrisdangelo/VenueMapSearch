@@ -8,6 +8,7 @@
         <scene sceneID="cUi-kZ-frf">
             <objects>
                 <navigationController id="rS3-R9-Ivy" sceneMemberID="viewController">
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="yXu-0R-QUA">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -67,15 +68,22 @@
                                     <segue destination="kLZ-bN-zJc" kind="push" identifier="ShowListSegue" id="aiG-ne-1iO"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="kzd-Ez-k5F">
+                                <rect key="frame" x="142" y="265" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="gWa-qS-Fex" firstAttribute="leading" secondItem="anZ-HT-cAx" secondAttribute="leading" id="8yQ-CU-WtE"/>
-                            <constraint firstAttribute="trailing" secondItem="5is-qk-mZg" secondAttribute="trailing" constant="20" id="9EG-9W-HSo"/>
-                            <constraint firstItem="LAG-lw-hhP" firstAttribute="top" secondItem="5is-qk-mZg" secondAttribute="bottom" constant="18" id="Gsx-Y8-1Jh"/>
-                            <constraint firstItem="gWa-qS-Fex" firstAttribute="top" secondItem="anZ-HT-cAx" secondAttribute="top" id="Zvg-Hs-0TD"/>
-                            <constraint firstItem="LAG-lw-hhP" firstAttribute="top" secondItem="gWa-qS-Fex" secondAttribute="bottom" id="kS7-Jz-Owi"/>
-                            <constraint firstAttribute="trailing" secondItem="gWa-qS-Fex" secondAttribute="trailing" id="t3x-PL-lWY"/>
+                            <constraint firstItem="LAG-lw-hhP" firstAttribute="top" secondItem="5is-qk-mZg" secondAttribute="bottom" constant="18" id="3pW-Dc-LoG"/>
+                            <constraint firstAttribute="trailing" secondItem="gWa-qS-Fex" secondAttribute="trailing" id="KNe-nu-2EK"/>
+                            <constraint firstItem="gWa-qS-Fex" firstAttribute="top" secondItem="anZ-HT-cAx" secondAttribute="top" id="h0x-c3-1ns"/>
+                            <constraint firstAttribute="centerX" secondItem="kzd-Ez-k5F" secondAttribute="centerX" constant="-0.5" id="hZP-ah-P6Q"/>
+                            <constraint firstAttribute="trailing" secondItem="5is-qk-mZg" secondAttribute="trailing" constant="20" symbolic="YES" id="iMs-ND-Mc3"/>
+                            <constraint firstAttribute="bottom" secondItem="gWa-qS-Fex" secondAttribute="bottom" id="kGs-0f-QpL"/>
+                            <constraint firstAttribute="centerY" secondItem="kzd-Ez-k5F" secondAttribute="centerY" constant="0.5" id="llx-Uk-rJa"/>
+                            <constraint firstItem="gWa-qS-Fex" firstAttribute="leading" secondItem="anZ-HT-cAx" secondAttribute="leading" id="tvl-8M-71M"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -83,6 +91,7 @@
                     <connections>
                         <outlet property="mapView" destination="gWa-qS-Fex" id="8ir-4a-ifn"/>
                         <outlet property="searchBar" destination="imx-5E-iPw" id="Niz-7a-Wef"/>
+                        <outlet property="spinner" destination="kzd-Ez-k5F" id="t6l-It-8SI"/>
                         <segue destination="Z0X-5T-gnY" kind="push" identifier="ShowVenueDetail" id="j7I-0u-EfL"/>
                     </connections>
                 </viewController>

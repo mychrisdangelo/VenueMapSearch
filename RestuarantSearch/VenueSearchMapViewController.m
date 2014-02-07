@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (nonatomic) BOOL isLocationServicesAllowed;
 @property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 
 @end
 
@@ -201,8 +202,10 @@
 
 - (void)startSearch:(NSString *)searchString
 {
-    // not very robus
+    // not very robust
     NSString* urlFriendlyString = [searchString stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+    
+    [self.spinner startAnimating];
     
     // search 1 km
     [GoogleMapManager nearestVenuesForLatLong:self.userLocation
@@ -214,6 +217,11 @@
                                  
                                  [self setSearchResults:results];
                                  [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+                                 
+                                 dispatch_async(dispatch_get_main_queue(), ^{
+                                     [self.spinner stopAnimating];
+                                 });
+                                 
                                  
                                  if (![results count]) {
                                      dispatch_async(dispatch_get_main_queue(), ^{
