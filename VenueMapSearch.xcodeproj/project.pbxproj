@@ -449,7 +449,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/chrisdangelo/Dropbox/Columbia\\ University/CN&MC/Homework/hw1/RestuarantSearch",
+					"$(SRCROOT)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RestuarantSearch/VenueMapSearch-Prefix.pch";
@@ -466,7 +466,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/chrisdangelo/Dropbox/Columbia\\ University/CN&MC/Homework/hw1/RestuarantSearch",
+					"$(SRCROOT)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RestuarantSearch/VenueMapSearch-Prefix.pch";
