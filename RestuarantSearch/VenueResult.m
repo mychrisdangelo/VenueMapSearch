@@ -27,6 +27,8 @@
         
         self.rating = [MapManagerDictionary[kVenueResultRating] floatValue];
         
+        self.priceLevel = [MapManagerDictionary[kVenueResultPriceLevel] integerValue];
+        
         // TODO other attributes
 		
 	}

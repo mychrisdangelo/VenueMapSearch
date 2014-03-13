@@ -18,6 +18,7 @@
 #define kVenueResultName @"name"
 #define kVenueResultRating @"rating"
 #define kVenueResultVicinity @"vicinity"
+#define kVenueResultPriceLevel @"price_level"
 
 @interface VenueResult : NSObject <MKAnnotation>
 
@@ -29,6 +30,7 @@
 @property (nonatomic, strong) NSString *venueResultId;
 @property (nonatomic) float rating;
 @property (nonatomic, strong) NSString *vicinity;
+@property (nonatomic) long priceLevel;
 
 @end
 
