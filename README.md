@@ -3,9 +3,9 @@ Venue Map Search App
 
 Chris D'Angelo  
 cd2665@columbia.edu  
-1/31/14  
+3/13/14
 Cellular Networks & Mobile Computing  
-Assignment 1  
+Assignment 3 (iOS Part 2)
 
 Demo
 ====
@@ -38,6 +38,10 @@ Stanford cs193p Fall 2013 Course Example:
     
 Google Places API Framework:
 * [COMSMapManager](https://github.com/williamFalcon/6998GoogleMapsFramework)
+
+Star Rating Font From Font Awesome:
+* [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
+
 
 To Do
 =====
