@@ -49,7 +49,7 @@
     // change searchResults from NSDictionary objecdts to VenueResult objects conforming to Annotations
     NSMutableArray *venueResultsMutable = [[NSMutableArray alloc] init];
     for (NSDictionary *each in searchResults) {
-        VenueResult *vr = [[VenueResult alloc] initWithMapManagerDictionary:each];
+        VenueResult *vr = [[VenueResult alloc] initWithMapManagerDictionary:each withCurrentLocation:self.userLocation];
         [venueResultsMutable addObject:vr];
     }
     

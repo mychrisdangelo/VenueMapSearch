@@ -22,7 +22,7 @@
 
 @interface VenueResult : NSObject <MKAnnotation>
 
-- (id)initWithMapManagerDictionary:(NSDictionary *)MapManagerDictionary;
+- (id)initWithMapManagerDictionary:(NSDictionary *)MapManagerDictionary withCurrentLocation:(CLLocationCoordinate2D)currentLocation;
 
 @property (nonatomic) CLLocationCoordinate2D location;
 @property (nonatomic, strong) NSString *iconURLString;
@@ -31,6 +31,7 @@
 @property (nonatomic) float rating;
 @property (nonatomic, strong) NSString *vicinity;
 @property (nonatomic) long priceLevel;
+@property (nonatomic) CLLocationDistance distanceFromUser;
 
 @end
 

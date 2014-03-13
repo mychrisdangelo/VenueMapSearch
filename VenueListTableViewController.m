@@ -20,10 +20,17 @@
 
 @synthesize searchResults = _searchResults;
 
+
 - (NSArray *)searchResults
 {
-    VenueSearchResultsModelSingleton *model = [VenueSearchResultsModelSingleton sharedModel];
-    return model.searchResults;
+    if (_searchResults == nil) {
+        // keep our sorted search results private. only interested in the global object once.
+        VenueSearchResultsModelSingleton *model = [VenueSearchResultsModelSingleton sharedModel];
+        _searchResults = model.searchResults;
+        return _searchResults;
+    }
+    
+    return _searchResults;
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -45,7 +52,34 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    [[NSNotificationCenter defaultCenter] addObserver:self.tableView selector:@selector(reloadData) name:kSearchResultsDidChangeNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadAndSortData) name:kSearchResultsDidChangeNotification object:nil];
+    [self sortData];
+    
+}
+
+- (void)sortData
+{
+    self.searchResults = [self.searchResults sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        if ([obj1 isMemberOfClass:[VenueResult class]] && [obj2 isMemberOfClass:[VenueResult class]]) {
+            VenueResult *vr1 = (VenueResult *)obj1;
+            VenueResult *vr2 = (VenueResult *)obj2;
+            
+            if (vr1.distanceFromUser > vr2.distanceFromUser) {
+                return (NSComparisonResult)NSOrderedDescending;
+            } else {
+                return (NSComparisonResult)NSOrderedAscending;
+            }
+        }
+        
+        return (NSComparisonResult)NSOrderedSame;
+    }];
+}
+
+- (void)reloadAndSortData
+{
+    self.searchResults = nil; // retrieve the new results
+    [self sortData];
+    [self.tableView reloadData];
 }
 
 - (void)dealloc
