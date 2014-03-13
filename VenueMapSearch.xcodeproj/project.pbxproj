@@ -29,6 +29,7 @@
 		407D4BFB189CBD7F0013BDF4 /* VenueListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 407D4BFA189CBD7F0013BDF4 /* VenueListTableViewController.m */; };
 		407D4BFE189CC52E0013BDF4 /* VenueDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 407D4BFD189CC52E0013BDF4 /* VenueDetailTableViewController.m */; };
 		407D4C01189CCAB10013BDF4 /* VenueCategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 407D4C00189CCAB10013BDF4 /* VenueCategoryTableViewController.m */; };
+		409D412D18D25F1F00F0161B /* VenueSearchResultsModelSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 409D412C18D25F1F00F0161B /* VenueSearchResultsModelSingleton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,8 @@
 		407D4BFD189CC52E0013BDF4 /* VenueDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueDetailTableViewController.m; sourceTree = "<group>"; };
 		407D4BFF189CCAB10013BDF4 /* VenueCategoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueCategoryTableViewController.h; sourceTree = "<group>"; };
 		407D4C00189CCAB10013BDF4 /* VenueCategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueCategoryTableViewController.m; sourceTree = "<group>"; };
+		409D412B18D25F1F00F0161B /* VenueSearchResultsModelSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueSearchResultsModelSingleton.h; sourceTree = "<group>"; };
+		409D412C18D25F1F00F0161B /* VenueSearchResultsModelSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueSearchResultsModelSingleton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +142,8 @@
 		403DC702189A158F0023C197 /* VenueMapSearchSearch */ = {
 			isa = PBXGroup;
 			children = (
+				409D412B18D25F1F00F0161B /* VenueSearchResultsModelSingleton.h */,
+				409D412C18D25F1F00F0161B /* VenueSearchResultsModelSingleton.m */,
 				40161954189C54770089C1B9 /* VenueSearchMapViewController.h */,
 				40161955189C54770089C1B9 /* VenueSearchMapViewController.m */,
 				407D4BF9189CBD7F0013BDF4 /* VenueListTableViewController.h */,
@@ -318,6 +323,7 @@
 				40161956189C54770089C1B9 /* VenueSearchMapViewController.m in Sources */,
 				407D4BFB189CBD7F0013BDF4 /* VenueListTableViewController.m in Sources */,
 				403DC709189A158F0023C197 /* main.m in Sources */,
+				409D412D18D25F1F00F0161B /* VenueSearchResultsModelSingleton.m in Sources */,
 				4016195B189C84F10089C1B9 /* VenueResult.m in Sources */,
 				407D4BFE189CC52E0013BDF4 /* VenueDetailTableViewController.m in Sources */,
 				403DC70D189A158F0023C197 /* VenueMapSearchAppDelegate.m in Sources */,

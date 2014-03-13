@@ -12,6 +12,7 @@
 #import <MapKit/MapKit.h>
 #import "Constants.h"
 
+
 @interface VenueSearchMapViewController : UIViewController <UISearchDisplayDelegate, UISearchBarDelegate, CLLocationManagerDelegate, MKMapViewDelegate>
 
 @property (nonatomic, strong) NSString *searchCategory;

@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "VenueResult.h"
 
+
 @interface VenueListTableViewController : UITableViewController
 
-@property (nonatomic, strong) NSArray *searchResults;
 
 @end

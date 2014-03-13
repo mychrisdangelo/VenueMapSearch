@@ -8,12 +8,23 @@
 
 #import "VenueListTableViewController.h"
 #import "VenueDetailTableViewController.h"
+#import "VenueSearchResultsModelSingleton.h"
 
 @interface VenueListTableViewController ()
+
+@property (nonatomic, strong) NSArray *searchResults;
 
 @end
 
 @implementation VenueListTableViewController
+
+@synthesize searchResults = _searchResults;
+
+- (NSArray *)searchResults
+{
+    VenueSearchResultsModelSingleton *model = [VenueSearchResultsModelSingleton sharedModel];
+    return model.searchResults;
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -33,7 +44,13 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self.tableView selector:@selector(reloadData) name:kSearchResultsDidChangeNotification object:nil];
+}
 
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self.tableView forKeyPath:kSearchResultsDidChangeNotification];
 }
 
 - (void)didReceiveMemoryWarning
