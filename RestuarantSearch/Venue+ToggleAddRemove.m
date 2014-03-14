@@ -41,6 +41,11 @@
         // only one object
         venue = [matches lastObject];
         [context deleteObject:venue];
+        
+        NSError *error = nil;
+        if (![context save:&error]) {
+            NSLog(@"error saving");
+        }
     }
     
     return venue;

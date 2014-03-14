@@ -33,6 +33,7 @@
 		409D413818D2882600F0161B /* VenueMapSearch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 409D413618D2882600F0161B /* VenueMapSearch.xcdatamodeld */; };
 		409D413B18D288BC00F0161B /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = 409D413A18D288BC00F0161B /* Venue.m */; };
 		409D414118D2894500F0161B /* Venue+ToggleAddRemove.m in Sources */ = {isa = PBXBuildFile; fileRef = 409D414018D2894500F0161B /* Venue+ToggleAddRemove.m */; };
+		409D414418D29EC300F0161B /* VenueFavoritesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 409D414318D29EC300F0161B /* VenueFavoritesTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,8 @@
 		409D413A18D288BC00F0161B /* Venue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Venue.m; sourceTree = "<group>"; };
 		409D413F18D2894500F0161B /* Venue+ToggleAddRemove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Venue+ToggleAddRemove.h"; sourceTree = "<group>"; };
 		409D414018D2894500F0161B /* Venue+ToggleAddRemove.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Venue+ToggleAddRemove.m"; sourceTree = "<group>"; };
+		409D414218D29EC300F0161B /* VenueFavoritesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueFavoritesTableViewController.h; sourceTree = "<group>"; };
+		409D414318D29EC300F0161B /* VenueFavoritesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueFavoritesTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +246,8 @@
 				40161955189C54770089C1B9 /* VenueSearchMapViewController.m */,
 				407D4BF9189CBD7F0013BDF4 /* VenueListTableViewController.h */,
 				407D4BFA189CBD7F0013BDF4 /* VenueListTableViewController.m */,
+				409D414218D29EC300F0161B /* VenueFavoritesTableViewController.h */,
+				409D414318D29EC300F0161B /* VenueFavoritesTableViewController.m */,
 				407D4BFC189CC52E0013BDF4 /* VenueDetailTableViewController.h */,
 				407D4BFD189CC52E0013BDF4 /* VenueDetailTableViewController.m */,
 			);
@@ -359,6 +364,7 @@
 				409D413518D27ECB00F0161B /* VenueResultsTableViewCell.m in Sources */,
 				403DC70D189A158F0023C197 /* VenueMapSearchAppDelegate.m in Sources */,
 				409D414118D2894500F0161B /* Venue+ToggleAddRemove.m in Sources */,
+				409D414418D29EC300F0161B /* VenueFavoritesTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

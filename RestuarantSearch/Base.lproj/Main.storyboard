@@ -163,38 +163,6 @@
             </objects>
             <point key="canvasLocation" x="1069" y="784"/>
         </scene>
-        <!--Table View Controller - Favorites-->
-        <scene sceneID="gls-0S-kZB">
-            <objects>
-                <tableViewController id="G4x-3j-Wwa" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="uou-lj-nLs">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FavoritesCell" id="o9z-xi-pYb">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o9z-xi-pYb" id="0oh-TC-iER">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="Z0X-5T-gnY" kind="push" id="pA4-eb-UrN"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="G4x-3j-Wwa" id="ENh-a0-Mcf"/>
-                            <outlet property="delegate" destination="G4x-3j-Wwa" id="pav-aH-wPE"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Favorites" id="n8J-s0-7Te"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MaJ-lP-DcG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1069" y="1504"/>
-        </scene>
         <!--Venue Detail Table View Controller-->
         <scene sceneID="k5A-FY-7bc">
             <objects>
@@ -291,16 +259,84 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="G4x-3j-Wwa" kind="relationship" relationship="rootViewController" id="8j5-dD-ubF"/>
+                        <segue destination="Ip7-iR-fE5" kind="relationship" relationship="rootViewController" id="KWr-br-Nrf"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NMc-cU-zhV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="483" y="1504"/>
         </scene>
+        <!--Venue Favorites Table View Controller - Favorites-->
+        <scene sceneID="c1Q-md-ArG">
+            <objects>
+                <tableViewController id="Ip7-iR-fE5" customClass="VenueFavoritesTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="U7U-jS-Dj1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="VenueListTableViewControllerCell" textLabel="9Lg-ti-4mD" detailTextLabel="Zrd-Gx-Brp" style="IBUITableViewCellStyleSubtitle" id="WZJ-Rr-D2W" customClass="VenueResultsTableViewCell">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WZJ-Rr-D2W" id="wqD-NX-blE">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9Lg-ti-4mD">
+                                            <rect key="frame" x="15" y="3" width="34" height="22"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Zrd-Gx-Brp">
+                                            <rect key="frame" x="15" y="25" width="43" height="15"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbn-nD-rrn">
+                                            <rect key="frame" x="253" y="0.0" width="67" height="43"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="67" id="Whm-Fm-jCM"/>
+                                            </constraints>
+                                            <state key="normal" image="FavoriteIconFilled">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="favoriteButtonSelected:" destination="WZJ-Rr-D2W" eventType="touchUpInside" id="jhA-wy-Lce"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="dbn-nD-rrn" firstAttribute="top" secondItem="wqD-NX-blE" secondAttribute="top" id="G64-ae-cbe"/>
+                                        <constraint firstAttribute="bottom" secondItem="dbn-nD-rrn" secondAttribute="bottom" id="Kcb-4N-Ye0"/>
+                                        <constraint firstAttribute="trailing" secondItem="dbn-nD-rrn" secondAttribute="trailing" id="t2t-pq-FSB"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="favoriteButton" destination="dbn-nD-rrn" id="0xd-f2-Crz"/>
+                                    <segue destination="Z0X-5T-gnY" kind="push" identifier="ShowVenueDetail" id="aUh-rA-hEC"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Ip7-iR-fE5" id="vue-yY-yd5"/>
+                            <outlet property="delegate" destination="Ip7-iR-fE5" id="k5f-os-9Fm"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Favorites" id="Sb2-Rw-Sdp"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d3v-W3-5TZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1069" y="1504"/>
+        </scene>
     </scenes>
     <resources>
         <image name="FavoriteIcon" width="27" height="26"/>
+        <image name="FavoriteIconFilled" width="27" height="26"/>
         <image name="ListIcon" width="27" height="24"/>
         <image name="MapIcon" width="26" height="30"/>
     </resources>
@@ -310,6 +346,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="pA4-eb-UrN"/>
+        <segue reference="aUh-rA-hEC"/>
     </inferredMetricsTieBreakers>
 </document>
