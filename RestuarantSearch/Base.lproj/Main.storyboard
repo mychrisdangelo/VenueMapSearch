@@ -127,10 +127,10 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Wu-WI-S05">
-                                            <rect key="frame" x="267" y="7" width="33" height="26"/>
+                                            <rect key="frame" x="280" y="7" width="33" height="26"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="33" id="1h5-gu-pGc"/>
+                                                <constraint firstAttribute="width" constant="33" id="Yet-41-2Oj"/>
                                             </constraints>
                                             <state key="normal" image="FavoriteIcon">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -141,8 +141,8 @@
                                         </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="8Wu-WI-S05" firstAttribute="top" secondItem="Wpv-Ja-54N" secondAttribute="top" constant="7" id="42F-W7-wl2"/>
-                                        <constraint firstAttribute="trailing" secondItem="8Wu-WI-S05" secondAttribute="trailing" constant="20" symbolic="YES" id="uzx-XK-L3I"/>
+                                        <constraint firstItem="8Wu-WI-S05" firstAttribute="top" secondItem="Wpv-Ja-54N" secondAttribute="top" constant="7" id="l1r-D3-SE9"/>
+                                        <constraint firstAttribute="trailing" secondItem="8Wu-WI-S05" secondAttribute="trailing" constant="7" id="oul-jj-qKW"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>

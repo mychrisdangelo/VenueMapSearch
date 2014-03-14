@@ -33,10 +33,6 @@
 
 - (void)setFavorited:(BOOL)favorited
 {
-    if (_favorited == favorited) {
-        return;
-    }
-    
     if (favorited) {
         [self.favoriteButton setImage:[UIImage imageNamed:@"FavoriteIconFilled"] forState:UIControlStateNormal];
     } else {
