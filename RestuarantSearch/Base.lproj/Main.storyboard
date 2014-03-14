@@ -127,10 +127,10 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Wu-WI-S05">
-                                            <rect key="frame" x="280" y="7" width="33" height="26"/>
+                                            <rect key="frame" x="253" y="0.0" width="67" height="43"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="33" id="Yet-41-2Oj"/>
+                                                <constraint firstAttribute="width" constant="67" id="uWj-YS-n6W"/>
                                             </constraints>
                                             <state key="normal" image="FavoriteIcon">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -141,8 +141,9 @@
                                         </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="8Wu-WI-S05" firstAttribute="top" secondItem="Wpv-Ja-54N" secondAttribute="top" constant="7" id="l1r-D3-SE9"/>
-                                        <constraint firstAttribute="trailing" secondItem="8Wu-WI-S05" secondAttribute="trailing" constant="7" id="oul-jj-qKW"/>
+                                        <constraint firstAttribute="bottom" secondItem="8Wu-WI-S05" secondAttribute="bottom" id="688-gR-MsO"/>
+                                        <constraint firstAttribute="trailing" secondItem="8Wu-WI-S05" secondAttribute="trailing" id="A0v-UG-QkF"/>
+                                        <constraint firstItem="8Wu-WI-S05" firstAttribute="top" secondItem="Wpv-Ja-54N" secondAttribute="top" id="Gks-1Y-1qS"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -171,11 +172,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FavoritesCell" id="o9z-xi-pYb">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FavoritesCell" id="o9z-xi-pYb">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o9z-xi-pYb" id="0oh-TC-iER">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -309,6 +310,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="GWw-TD-Gcq"/>
+        <segue reference="pA4-eb-UrN"/>
     </inferredMetricsTieBreakers>
 </document>
