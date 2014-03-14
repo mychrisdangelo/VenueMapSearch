@@ -9,6 +9,8 @@
 #import "VenueListTableViewController.h"
 #import "VenueDetailTableViewController.h"
 #import "VenueSearchResultsModelSingleton.h"
+#import "Venue+ToggleAddRemove.h"
+#import "VenueMapSearchAppDelegate.h"
 
 @interface VenueListTableViewController ()
 
@@ -108,6 +110,27 @@
     }
 }
 
+- (BOOL)isVenueResultInFavorites:(VenueResult *)venueResult
+{
+    VenueMapSearchAppDelegate *delegate = [UIApplication sharedApplication].delegate;
+    NSManagedObjectContext *context = delegate.managedObjectContext;
+    
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Venue"];
+    request.predicate = [NSPredicate predicateWithFormat:@"googlePlacesID = %@", venueResult.googlePlacesID];
+    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"googlePlacesID" ascending:YES];
+    request.sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
+    
+    NSError *error = nil;
+    NSArray *matches = [context executeFetchRequest:request error:&error];
+    
+    if (!matches || ([matches count] > 1)) {
+        // sanity check
+         NSLog(@"favorite exists twice");
+    }
+    
+    return [matches count] == 1;
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -125,6 +148,7 @@
         cell.textLabel.text = vr.name;
         cell.detailTextLabel.text = vr.vicinity;
         cell.favoriteButton.hidden = NO;
+        cell.favorited = [self isVenueResultInFavorites:vr];
     } else {
         cell.textLabel.text = @"No Results.";
         cell.detailTextLabel.text = @"";
@@ -142,7 +166,8 @@
 {
     NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
     VenueResult *vr = self.searchResults[indexPath.row];
-    NSLog(@"User Would like to add to favorite");
+    VenueMapSearchAppDelegate *delegate = [UIApplication sharedApplication].delegate;
+    [Venue addRemoveVenueWithVenueResult:vr inManagedObjectContext:delegate.managedObjectContext];
 }
 
 @end

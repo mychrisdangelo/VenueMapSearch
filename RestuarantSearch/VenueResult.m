@@ -24,10 +24,9 @@
         self.location = tmpLocation;
         
         self.vicinity = MapManagerDictionary[kVenueResultVicinity];
-        
         self.rating = [MapManagerDictionary[kVenueResultRating] floatValue];
-        
         self.priceLevel = [MapManagerDictionary[kVenueResultPriceLevel] integerValue];
+        self.googlePlacesID = MapManagerDictionary[kVenueResultId];
         
         CLLocation *userLocation = [[CLLocation alloc] initWithLatitude:currentLocation.latitude longitude:currentLocation.longitude];
         CLLocation *venueLocation = [[CLLocation alloc] initWithLatitude:tmpLocation.latitude longitude:tmpLocation.longitude];

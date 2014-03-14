@@ -16,6 +16,7 @@
 
 @interface VenueResultsTableViewCell : UITableViewCell
 
+@property (nonatomic) BOOL favorited;
 @property (weak, nonatomic) IBOutlet UIButton *favoriteButton;
 @property (weak, nonatomic) id <VenueResultsTableViewCellDelegate> delegate;
 

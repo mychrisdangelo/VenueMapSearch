@@ -31,6 +31,20 @@
     // Configure the view for the selected state
 }
 
+- (void)setFavorited:(BOOL)favorited
+{
+    if (_favorited == favorited) {
+        return;
+    }
+    
+    if (favorited) {
+        [self.favoriteButton setImage:[UIImage imageNamed:@"FavoriteIconFilled"] forState:UIControlStateNormal];
+    } else {
+        [self.favoriteButton setImage:[UIImage imageNamed:@"FavoriteIcon"] forState:UIControlStateNormal];
+    }
+    
+}
+
 - (IBAction)favoriteButtonSelected:(UIButton *)sender {
     if ([sender.imageView.image isEqual:[UIImage imageNamed:@"FavoriteIcon"]]) {
         [sender setImage:[UIImage imageNamed:@"FavoriteIconFilled"] forState:UIControlStateNormal];
