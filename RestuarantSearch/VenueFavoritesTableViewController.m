@@ -12,6 +12,8 @@
 #import "VenueDetailTableViewController.h"
 #import "VenueResult.h"
 
+NSString * const kFavoritesDidChangeFromFavoritesViewNotification = @"kFavoritesDidChangeFromFavoritesViewNotification";
+
 @interface VenueFavoritesTableViewController () <NSFetchedResultsControllerDelegate, VenueResultsTableViewCellDelegate>
 
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
@@ -170,6 +172,8 @@
     VenueResult *vr = [[VenueResult alloc] init];
     vr.googlePlacesID = venue.googlePlacesID;
     [Venue addRemoveVenueWithVenueResult:vr inManagedObjectContext:delegate.managedObjectContext];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:kFavoritesDidChangeFromFavoritesViewNotification object:nil userInfo:nil];
 }
 
 @end

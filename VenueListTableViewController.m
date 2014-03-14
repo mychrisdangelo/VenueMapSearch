@@ -11,6 +11,7 @@
 #import "VenueSearchResultsModelSingleton.h"
 #import "Venue+ToggleAddRemove.h"
 #import "VenueMapSearchAppDelegate.h"
+#import "VenueFavoritesTableViewController.h"
 
 @interface VenueListTableViewController ()
 
@@ -47,16 +48,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadAndSortData) name:kSearchResultsDidChangeNotification object:nil];
-    [self sortData];
+    // data stale in tableview may be a favorite that was changed in favorites table
+    [[NSNotificationCenter defaultCenter] addObserver:self.tableView selector:@selector(reloadData) name:kFavoritesDidChangeFromFavoritesViewNotification object:nil];
     
+    [self sortData];
 }
 
 - (void)sortData
@@ -87,6 +84,7 @@
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self.tableView forKeyPath:kSearchResultsDidChangeNotification];
+    [[NSNotificationCenter defaultCenter] removeObserver:self.tableView forKeyPath:kFavoritesDidChangeFromFavoritesViewNotification];
 }
 
 - (void)didReceiveMemoryWarning

@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "VenueResultsTableViewCell.h"
 
+extern NSString * const kFavoritesDidChangeFromFavoritesViewNotification;
+
 @interface VenueFavoritesTableViewController : UITableViewController
 
 @end
