@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "VenueResult.h"
+#import "VenueResultsTableViewCell.h"
 
-
-@interface VenueListTableViewController : UITableViewController
+@interface VenueListTableViewController : UITableViewController <VenueResultsTableViewCellDelegate>
 
 
 @end

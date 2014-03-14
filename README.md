@@ -39,8 +39,9 @@ Stanford cs193p Fall 2013 Course Example:
 Google Places API Framework:
 * [COMSMapManager](https://github.com/williamFalcon/6998GoogleMapsFramework)
 
-Star Rating Font From Font Awesome:
-* [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
+Star rating font from [Font Awesome](http://fortawesome.github.io/Font-Awesome/).
+
+Icons by [PixelLove](http://www.pixellove.com).
 
 
 To Do

@@ -105,11 +105,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="VenueListTableViewControllerCell" textLabel="dWO-11-goz" detailTextLabel="OVs-Xz-wTl" style="IBUITableViewCellStyleSubtitle" id="KLe-ef-c6g">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="VenueListTableViewControllerCell" textLabel="dWO-11-goz" detailTextLabel="OVs-Xz-wTl" style="IBUITableViewCellStyleSubtitle" id="KLe-ef-c6g" customClass="VenueResultsTableViewCell">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KLe-ef-c6g" id="Wpv-Ja-54N">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dWO-11-goz">
@@ -126,9 +126,27 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Wu-WI-S05">
+                                            <rect key="frame" x="267" y="7" width="33" height="26"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="33" id="1h5-gu-pGc"/>
+                                            </constraints>
+                                            <state key="normal" image="FavoriteIcon">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="favoriteButtonSelected:" destination="KLe-ef-c6g" eventType="touchUpInside" id="2cp-zt-9sH"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="8Wu-WI-S05" firstAttribute="top" secondItem="Wpv-Ja-54N" secondAttribute="top" constant="7" id="42F-W7-wl2"/>
+                                        <constraint firstAttribute="trailing" secondItem="8Wu-WI-S05" secondAttribute="trailing" constant="20" symbolic="YES" id="uzx-XK-L3I"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="favoriteButton" destination="8Wu-WI-S05" id="Zzp-ja-YNu"/>
                                     <segue destination="Z0X-5T-gnY" kind="push" identifier="ShowVenueDetail" id="GWw-TD-Gcq"/>
                                 </connections>
                             </tableViewCell>

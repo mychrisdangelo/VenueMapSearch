@@ -118,23 +118,31 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"VenueListTableViewControllerCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    
+    VenueResultsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     if ([self.searchResults count]) {
         VenueResult *vr = (VenueResult *)self.searchResults[indexPath.row];
         cell.textLabel.text = vr.name;
         cell.detailTextLabel.text = vr.vicinity;
-        [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+        cell.favoriteButton.hidden = NO;
     } else {
         cell.textLabel.text = @"No Results.";
         cell.detailTextLabel.text = @"";
-        [cell setAccessoryType:UITableViewCellAccessoryNone];
+        cell.favoriteButton.hidden = YES;
     }
 
+    cell.delegate = self;
     
     return cell;
+}
+
+#pragma mark - VenueResultsTableViewCellDelegate
+
+- (void)venueResultsTableViewCellPressedFavoriteButton:(VenueResultsTableViewCell *)sender
+{
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+    VenueResult *vr = self.searchResults[indexPath.row];
+    NSLog(@"User Would like to add to favorite");
 }
 
 @end

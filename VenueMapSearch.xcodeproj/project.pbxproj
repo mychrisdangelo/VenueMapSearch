@@ -29,6 +29,7 @@
 		407D4BFE189CC52E0013BDF4 /* VenueDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 407D4BFD189CC52E0013BDF4 /* VenueDetailTableViewController.m */; };
 		409D412D18D25F1F00F0161B /* VenueSearchResultsModelSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 409D412C18D25F1F00F0161B /* VenueSearchResultsModelSingleton.m */; };
 		409D413218D26A4C00F0161B /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 409D413118D26A4C00F0161B /* FontAwesome.otf */; };
+		409D413518D27ECB00F0161B /* VenueResultsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 409D413418D27ECB00F0161B /* VenueResultsTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,8 @@
 		409D412B18D25F1F00F0161B /* VenueSearchResultsModelSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueSearchResultsModelSingleton.h; sourceTree = "<group>"; };
 		409D412C18D25F1F00F0161B /* VenueSearchResultsModelSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueSearchResultsModelSingleton.m; sourceTree = "<group>"; };
 		409D413118D26A4C00F0161B /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.otf; sourceTree = "<group>"; };
+		409D413318D27ECB00F0161B /* VenueResultsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueResultsTableViewCell.h; sourceTree = "<group>"; };
+		409D413418D27ECB00F0161B /* VenueResultsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueResultsTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,12 +142,15 @@
 		403DC702189A158F0023C197 /* VenueMapSearchSearch */ = {
 			isa = PBXGroup;
 			children = (
+				403DC70E189A158F0023C197 /* Main.storyboard */,
 				409D412B18D25F1F00F0161B /* VenueSearchResultsModelSingleton.h */,
 				409D412C18D25F1F00F0161B /* VenueSearchResultsModelSingleton.m */,
 				40161954189C54770089C1B9 /* VenueSearchMapViewController.h */,
 				40161955189C54770089C1B9 /* VenueSearchMapViewController.m */,
 				407D4BF9189CBD7F0013BDF4 /* VenueListTableViewController.h */,
 				407D4BFA189CBD7F0013BDF4 /* VenueListTableViewController.m */,
+				409D413318D27ECB00F0161B /* VenueResultsTableViewCell.h */,
+				409D413418D27ECB00F0161B /* VenueResultsTableViewCell.m */,
 				407D4BFC189CC52E0013BDF4 /* VenueDetailTableViewController.h */,
 				407D4BFD189CC52E0013BDF4 /* VenueDetailTableViewController.m */,
 				40161959189C84F10089C1B9 /* VenueResult.h */,
@@ -190,7 +196,6 @@
 			isa = PBXGroup;
 			children = (
 				409D413018D26A2600F0161B /* Fonts */,
-				403DC70E189A158F0023C197 /* Main.storyboard */,
 				40161953189C543C0089C1B9 /* Constants.h */,
 				403DC70B189A158F0023C197 /* VenueMapSearchAppDelegate.h */,
 				403DC70C189A158F0023C197 /* VenueMapSearchAppDelegate.m */,
@@ -312,6 +317,7 @@
 				409D412D18D25F1F00F0161B /* VenueSearchResultsModelSingleton.m in Sources */,
 				4016195B189C84F10089C1B9 /* VenueResult.m in Sources */,
 				407D4BFE189CC52E0013BDF4 /* VenueDetailTableViewController.m in Sources */,
+				409D413518D27ECB00F0161B /* VenueResultsTableViewCell.m in Sources */,
 				403DC70D189A158F0023C197 /* VenueMapSearchAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
