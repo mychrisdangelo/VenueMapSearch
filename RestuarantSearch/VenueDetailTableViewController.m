@@ -15,6 +15,7 @@ enum kCellMapping
     kVenueName,
     kVenueVicinity,
     kVenueRating,
+    kVenuePrice,
     kVenueCount
 };
 
@@ -50,6 +51,15 @@ enum kCellMapping
     // Dispose of any resources that can be recreated.
 }
 
++ (NSString *)stringFromString:(NSString *)aString toRepeat:(long)numberOfTimes
+{
+    NSMutableString *retString = [[NSMutableString alloc] init];
+    for (int i = 0; i < numberOfTimes; i++) {
+        [retString appendString:aString];
+    }
+    return retString;
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -78,8 +88,12 @@ enum kCellMapping
             break;
         case kVenueRating:
             cell.textLabel.text = @"Rating";
-            cell.detailTextLabel.text = [NSString stringWithFormat:@"%.02f", self.venue.rating];
+            [cell.detailTextLabel setFont:[UIFont fontWithName:@"FontAwesome" size:14.0]];
+            [cell.detailTextLabel setText:[VenueDetailTableViewController stringFromString:@"\uf005" toRepeat:self.venue.rating]];
             break;
+        case kVenuePrice:
+            cell.textLabel.text = @"Price";
+            cell.detailTextLabel.text = [VenueDetailTableViewController stringFromString:@"$" toRepeat:self.venue.priceLevel];
     }
     
     return cell;

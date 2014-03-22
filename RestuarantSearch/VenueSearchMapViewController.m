@@ -10,12 +10,13 @@
 #import "VenueResult.h"
 #import "VenueListTableViewController.h"
 #import "VenueDetailTableViewController.h"
+#import "VenueSearchResultsModelSingleton.h"
 
 @interface VenueSearchMapViewController ()
 
+@property (nonatomic, strong) NSArray *searchResults;
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic) CLLocationCoordinate2D userLocation;
-@property (nonatomic, strong) NSArray *searchResults;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (nonatomic) BOOL isLocationServicesAllowed;
 @property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
@@ -23,7 +24,15 @@
 
 @end
 
-@implementation VenueSearchMapViewController 
+@implementation VenueSearchMapViewController
+
+@synthesize searchResults = _searchResults;
+
+- (NSArray *)searchResults
+{
+    VenueSearchResultsModelSingleton *model = [VenueSearchResultsModelSingleton sharedModel];
+    return model.searchResults;
+}
 
 - (void)setUserLocation:(CLLocationCoordinate2D)userLocation
 {
@@ -33,14 +42,20 @@
 
 - (void)setSearchResults:(NSArray *)searchResults
 {
+    if (_searchResults == searchResults) {
+        return;
+    }
+    
     // change searchResults from NSDictionary objecdts to VenueResult objects conforming to Annotations
     NSMutableArray *venueResultsMutable = [[NSMutableArray alloc] init];
     for (NSDictionary *each in searchResults) {
-        VenueResult *vr = [[VenueResult alloc] initWithMapManagerDictionary:each];
+        VenueResult *vr = [[VenueResult alloc] initWithMapManagerDictionary:each withCurrentLocation:self.userLocation];
         [venueResultsMutable addObject:vr];
     }
     
     _searchResults = [venueResultsMutable copy];
+    VenueSearchResultsModelSingleton *model = [VenueSearchResultsModelSingleton sharedModel];
+    model.searchResults = _searchResults;
     
     [self.mapView removeAnnotations:self.mapView.annotations];
     [self.mapView addAnnotations:_searchResults];
@@ -78,14 +93,6 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([segue.identifier isEqualToString:@"ShowListSegue"]) {
-        if ([segue.destinationViewController isKindOfClass:[VenueListTableViewController class]]) {
-            VenueListTableViewController *vltvc = (VenueListTableViewController *)segue.destinationViewController;
-            vltvc.searchResults = self.searchResults;
-            
-        }
-    }
-    
     if ([segue.identifier isEqualToString:@"ShowVenueDetail"]) {
         if ([segue.destinationViewController isKindOfClass:[VenueDetailTableViewController class]]) {
             VenueDetailTableViewController *vdtvc = (VenueDetailTableViewController *)segue.destinationViewController;

@@ -18,17 +18,21 @@
 #define kVenueResultName @"name"
 #define kVenueResultRating @"rating"
 #define kVenueResultVicinity @"vicinity"
+#define kVenueResultPriceLevel @"price_level"
+
 
 @interface VenueResult : NSObject <MKAnnotation>
 
-- (id)initWithMapManagerDictionary:(NSDictionary *)MapManagerDictionary;
+- (id)initWithMapManagerDictionary:(NSDictionary *)MapManagerDictionary withCurrentLocation:(CLLocationCoordinate2D)currentLocation;
 
 @property (nonatomic) CLLocationCoordinate2D location;
 @property (nonatomic, strong) NSString *iconURLString;
 @property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSString *venueResultId;
 @property (nonatomic) float rating;
 @property (nonatomic, strong) NSString *vicinity;
+@property (nonatomic) long priceLevel;
+@property (nonatomic) CLLocationDistance distanceFromUser;
+@property (nonatomic, strong) NSString *googlePlacesID;
 
 @end
 

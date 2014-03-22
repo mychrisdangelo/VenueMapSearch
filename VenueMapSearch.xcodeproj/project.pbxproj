@@ -25,10 +25,15 @@
 		403DC735189A16160023C197 /* COMSMapManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 403DC734189A16160023C197 /* COMSMapManager.framework */; };
 		403DC739189A19ED0023C197 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 403DC738189A19ED0023C197 /* CoreLocation.framework */; };
 		403DC73B189A1AE20023C197 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 403DC73A189A1AE20023C197 /* MapKit.framework */; };
-		4079ECC9189D778E0010B85D /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4079ECC8189D778E0010B85D /* FontAwesome.otf */; };
 		407D4BFB189CBD7F0013BDF4 /* VenueListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 407D4BFA189CBD7F0013BDF4 /* VenueListTableViewController.m */; };
 		407D4BFE189CC52E0013BDF4 /* VenueDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 407D4BFD189CC52E0013BDF4 /* VenueDetailTableViewController.m */; };
-		407D4C01189CCAB10013BDF4 /* VenueCategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 407D4C00189CCAB10013BDF4 /* VenueCategoryTableViewController.m */; };
+		409D412D18D25F1F00F0161B /* VenueSearchResultsModelSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 409D412C18D25F1F00F0161B /* VenueSearchResultsModelSingleton.m */; };
+		409D413218D26A4C00F0161B /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 409D413118D26A4C00F0161B /* FontAwesome.otf */; };
+		409D413518D27ECB00F0161B /* VenueResultsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 409D413418D27ECB00F0161B /* VenueResultsTableViewCell.m */; };
+		409D413818D2882600F0161B /* VenueMapSearch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 409D413618D2882600F0161B /* VenueMapSearch.xcdatamodeld */; };
+		409D413B18D288BC00F0161B /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = 409D413A18D288BC00F0161B /* Venue.m */; };
+		409D414118D2894500F0161B /* Venue+ToggleAddRemove.m in Sources */ = {isa = PBXBuildFile; fileRef = 409D414018D2894500F0161B /* Venue+ToggleAddRemove.m */; };
+		409D414418D29EC300F0161B /* VenueFavoritesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 409D414318D29EC300F0161B /* VenueFavoritesTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,13 +72,22 @@
 		403DC734189A16160023C197 /* COMSMapManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = COMSMapManager.framework; sourceTree = "<group>"; };
 		403DC738189A19ED0023C197 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		403DC73A189A1AE20023C197 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		4079ECC8189D778E0010B85D /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.otf; path = ../FontAwesome.otf; sourceTree = "<group>"; };
 		407D4BF9189CBD7F0013BDF4 /* VenueListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VenueListTableViewController.h; path = ../VenueListTableViewController.h; sourceTree = "<group>"; };
 		407D4BFA189CBD7F0013BDF4 /* VenueListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VenueListTableViewController.m; path = ../VenueListTableViewController.m; sourceTree = "<group>"; };
 		407D4BFC189CC52E0013BDF4 /* VenueDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueDetailTableViewController.h; sourceTree = "<group>"; };
 		407D4BFD189CC52E0013BDF4 /* VenueDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueDetailTableViewController.m; sourceTree = "<group>"; };
-		407D4BFF189CCAB10013BDF4 /* VenueCategoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueCategoryTableViewController.h; sourceTree = "<group>"; };
-		407D4C00189CCAB10013BDF4 /* VenueCategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueCategoryTableViewController.m; sourceTree = "<group>"; };
+		409D412B18D25F1F00F0161B /* VenueSearchResultsModelSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueSearchResultsModelSingleton.h; sourceTree = "<group>"; };
+		409D412C18D25F1F00F0161B /* VenueSearchResultsModelSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueSearchResultsModelSingleton.m; sourceTree = "<group>"; };
+		409D413118D26A4C00F0161B /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.otf; sourceTree = "<group>"; };
+		409D413318D27ECB00F0161B /* VenueResultsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueResultsTableViewCell.h; sourceTree = "<group>"; };
+		409D413418D27ECB00F0161B /* VenueResultsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueResultsTableViewCell.m; sourceTree = "<group>"; };
+		409D413718D2882600F0161B /* VenueMapSearch.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VenueMapSearch.xcdatamodel; sourceTree = "<group>"; };
+		409D413918D288BC00F0161B /* Venue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Venue.h; sourceTree = "<group>"; };
+		409D413A18D288BC00F0161B /* Venue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Venue.m; sourceTree = "<group>"; };
+		409D413F18D2894500F0161B /* Venue+ToggleAddRemove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Venue+ToggleAddRemove.h"; sourceTree = "<group>"; };
+		409D414018D2894500F0161B /* Venue+ToggleAddRemove.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Venue+ToggleAddRemove.m"; sourceTree = "<group>"; };
+		409D414218D29EC300F0161B /* VenueFavoritesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueFavoritesTableViewController.h; sourceTree = "<group>"; };
+		409D414318D29EC300F0161B /* VenueFavoritesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueFavoritesTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,16 +153,10 @@
 		403DC702189A158F0023C197 /* VenueMapSearchSearch */ = {
 			isa = PBXGroup;
 			children = (
-				40161954189C54770089C1B9 /* VenueSearchMapViewController.h */,
-				40161955189C54770089C1B9 /* VenueSearchMapViewController.m */,
-				407D4BF9189CBD7F0013BDF4 /* VenueListTableViewController.h */,
-				407D4BFA189CBD7F0013BDF4 /* VenueListTableViewController.m */,
-				407D4BFC189CC52E0013BDF4 /* VenueDetailTableViewController.h */,
-				407D4BFD189CC52E0013BDF4 /* VenueDetailTableViewController.m */,
-				40161959189C84F10089C1B9 /* VenueResult.h */,
-				4016195A189C84F10089C1B9 /* VenueResult.m */,
+				409D413D18D288D600F0161B /* View */,
+				409D413C18D288C900F0161B /* Model */,
+				409D413E18D288DC00F0161B /* Controller */,
 				4079ECC7189D72570010B85D /* Shared */,
-				4079ECC6189D721B0010B85D /* Unused */,
 				403DC703189A158F0023C197 /* Supporting Files */,
 			);
 			name = VenueMapSearchSearch;
@@ -185,34 +193,65 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		4079ECC6189D721B0010B85D /* Unused */ = {
-			isa = PBXGroup;
-			children = (
-				407D4BFF189CCAB10013BDF4 /* VenueCategoryTableViewController.h */,
-				407D4C00189CCAB10013BDF4 /* VenueCategoryTableViewController.m */,
-			);
-			name = Unused;
-			sourceTree = "<group>";
-		};
 		4079ECC7189D72570010B85D /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				403DC70E189A158F0023C197 /* Main.storyboard */,
+				409D413018D26A2600F0161B /* Fonts */,
 				40161953189C543C0089C1B9 /* Constants.h */,
 				403DC70B189A158F0023C197 /* VenueMapSearchAppDelegate.h */,
 				403DC70C189A158F0023C197 /* VenueMapSearchAppDelegate.m */,
 				403DC717189A158F0023C197 /* Images.xcassets */,
-				4079ECCA189D78E20010B85D /* Fonts */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
 		};
-		4079ECCA189D78E20010B85D /* Fonts */ = {
+		409D413018D26A2600F0161B /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				4079ECC8189D778E0010B85D /* FontAwesome.otf */,
+				409D413118D26A4C00F0161B /* FontAwesome.otf */,
 			);
 			name = Fonts;
+			sourceTree = "<group>";
+		};
+		409D413C18D288C900F0161B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				409D413618D2882600F0161B /* VenueMapSearch.xcdatamodeld */,
+				409D413918D288BC00F0161B /* Venue.h */,
+				409D413A18D288BC00F0161B /* Venue.m */,
+				409D413F18D2894500F0161B /* Venue+ToggleAddRemove.h */,
+				409D414018D2894500F0161B /* Venue+ToggleAddRemove.m */,
+				40161959189C84F10089C1B9 /* VenueResult.h */,
+				4016195A189C84F10089C1B9 /* VenueResult.m */,
+				409D412B18D25F1F00F0161B /* VenueSearchResultsModelSingleton.h */,
+				409D412C18D25F1F00F0161B /* VenueSearchResultsModelSingleton.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		409D413D18D288D600F0161B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				403DC70E189A158F0023C197 /* Main.storyboard */,
+				409D413318D27ECB00F0161B /* VenueResultsTableViewCell.h */,
+				409D413418D27ECB00F0161B /* VenueResultsTableViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		409D413E18D288DC00F0161B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				40161954189C54770089C1B9 /* VenueSearchMapViewController.h */,
+				40161955189C54770089C1B9 /* VenueSearchMapViewController.m */,
+				407D4BF9189CBD7F0013BDF4 /* VenueListTableViewController.h */,
+				407D4BFA189CBD7F0013BDF4 /* VenueListTableViewController.m */,
+				409D414218D29EC300F0161B /* VenueFavoritesTableViewController.h */,
+				409D414318D29EC300F0161B /* VenueFavoritesTableViewController.m */,
+				407D4BFC189CC52E0013BDF4 /* VenueDetailTableViewController.h */,
+				407D4BFD189CC52E0013BDF4 /* VenueDetailTableViewController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +299,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = RestuarantSearch;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Chris D'Angelo";
 				TargetAttributes = {
 					403DC71C189A158F0023C197 = {
@@ -292,9 +331,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4079ECC9189D778E0010B85D /* FontAwesome.otf in Resources */,
 				403DC718189A158F0023C197 /* Images.xcassets in Resources */,
 				403DC707189A158F0023C197 /* InfoPlist.strings in Resources */,
+				409D413218D26A4C00F0161B /* FontAwesome.otf in Resources */,
 				403DC710189A158F0023C197 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,13 +353,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				407D4C01189CCAB10013BDF4 /* VenueCategoryTableViewController.m in Sources */,
 				40161956189C54770089C1B9 /* VenueSearchMapViewController.m in Sources */,
 				407D4BFB189CBD7F0013BDF4 /* VenueListTableViewController.m in Sources */,
 				403DC709189A158F0023C197 /* main.m in Sources */,
+				409D413B18D288BC00F0161B /* Venue.m in Sources */,
+				409D412D18D25F1F00F0161B /* VenueSearchResultsModelSingleton.m in Sources */,
 				4016195B189C84F10089C1B9 /* VenueResult.m in Sources */,
 				407D4BFE189CC52E0013BDF4 /* VenueDetailTableViewController.m in Sources */,
+				409D413818D2882600F0161B /* VenueMapSearch.xcdatamodeld in Sources */,
+				409D413518D27ECB00F0161B /* VenueResultsTableViewCell.m in Sources */,
 				403DC70D189A158F0023C197 /* VenueMapSearchAppDelegate.m in Sources */,
+				409D414118D2894500F0161B /* Venue+ToggleAddRemove.m in Sources */,
+				409D414418D29EC300F0161B /* VenueFavoritesTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,7 +418,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -413,7 +456,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -479,7 +521,6 @@
 		403DC732189A158F0023C197 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RestuarantSearch.app/RestuarantSearch";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -502,7 +543,6 @@
 		403DC733189A158F0023C197 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RestuarantSearch.app/RestuarantSearch";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -549,6 +589,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		409D413618D2882600F0161B /* VenueMapSearch.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				409D413718D2882600F0161B /* VenueMapSearch.xcdatamodel */,
+			);
+			currentVersion = 409D413718D2882600F0161B /* VenueMapSearch.xcdatamodel */;
+			path = VenueMapSearch.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 403DC6F1189A158F0023C197 /* Project object */;
 }
