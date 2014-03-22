@@ -3,7 +3,7 @@ Venue Map Search App
 
 Chris D'Angelo  
 cd2665@columbia.edu  
-3/13/14
+3/22/14
 Cellular Networks & Mobile Computing  
 Assignment 3 (iOS Part 2)
 
