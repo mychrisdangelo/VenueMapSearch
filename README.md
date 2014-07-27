@@ -1,6 +1,6 @@
 Venue Map Search App
 ===================
-
+ 
 Chris D'Angelo  
 cd2665@columbia.edu  
 3/22/14
